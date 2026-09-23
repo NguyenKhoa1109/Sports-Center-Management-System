@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#006c4a", "on-secondary-container": "#fefcff", "surface-container-low": "#f2f3ff", "on-background": "#131b2e", "inverse-on-surface": "#eef0ff", "surface": "#faf8ff", "tertiary-fixed-dim": "#4edea3", "primary-container": "#00855d", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#005137", "on-secondary-fixed": "#00174b", "error": "#ba1a1a", "surface-container": "#eaedff", "on-secondary-fixed-variant": "#003ea8", "on-surface-variant": "#3d4a42", "inverse-primary": "#68dba9", "on-tertiary-container": "#f5fff6", "on-primary-container": "#f5fff7", "on-primary-fixed": "#002114", "error-container": "#ffdad6", "inverse-surface": "#283044", "on-tertiary-fixed-variant": "#005236", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "secondary-container": "#316bf3", "secondary": "#0051d5", "surface-variant": "#dae2fd", "background": "#faf8ff", "primary-fixed-dim": "#68dba9", "secondary-fixed": "#dbe1ff", "primary-fixed": "#85f8c4", "on-error": "#ffffff", "outline": "#6d7a72", "surface-dim": "#d2d9f4", "on-primary": "#ffffff", "on-tertiary-fixed": "#002113", "tertiary-fixed": "#6ffbbe", "tertiary-container": "#00855b", "outline-variant": "bccac0", "primary": "#006948", "surface-bright": "#faf8ff", "tertiary": "#006947", "secondary-fixed-dim": "#b4c5ff", "on-surface": "#131b2e", "on-tertiary": "#ffffff", "surface-container-highest": "#dae2fd", "surface-container-high": "#e2e7ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-2xl": "3rem", "margin-mobile": "1rem", "gutter": "1.5rem", "gutter-lg": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-md": "1rem", "margin": "2rem", "space-xl": "2rem" }, "fontFamily": { "body-sm": ["Inter"], "display": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-tabular": ["Inter"], "caption": ["Inter"], "stat-value": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-tabular": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "caption": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "stat-value": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Brand logo. - Primary color: #059669 - Font: plusJakartaSans - Mode: light - Roundness: rounded-md" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WXC6pdqgNL5BSlI8ck8CUPCB51yyf6bOEQ3htC5fi8dB9XbRa_xDMEAfo_jSO_f5C-Sl5fS0uKgyAIG3eTsf5gbdao9j1VQFzGfpKpi9-zsnF4guVzuuXD6OHy2UwKsN3LwdqGW45iMyFnG_8P0kZ0NFi_-rkqxh-X55KlZoeADG9a9lSQVcxdU-2HBBjtPL7dqEtbCSq0MBfNLwnfwpxOAmIic90St5x9IUQPxkh-aURSuv07hOskGcc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Apex Sports</span><span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Coach Portal</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-lg">sports</span><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-none">High Performance</span><span class="font-caption text-caption text-on-surface-variant">Tennis &amp; Athletic Dev</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-base">unfold_more</span></div></div><nav class="flex-1 px-space-sm space-y-1 mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="schedule-and-classes" href="#"><span class="material-symbols-outlined text-xl">calendar_month</span><span>Schedule &amp; Classes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rosters-and-attendance" href="#"><span class="material-symbols-outlined text-xl">how_to_reg</span><span>Rosters &amp; Attendance</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="player-evaluations" href="#"><span class="material-symbols-outlined text-xl">assessment</span><span>Player Evaluations</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="training-plans-and-ai" href="#"><span class="material-symbols-outlined text-xl">psychology</span><span>Training Plans &amp; AI</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="student-messaging" href="#"><span class="material-symbols-outlined text-xl">chat</span><span>Student Messaging</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="performance-analytics" href="#"><span class="material-symbols-outlined text-xl">insights</span><span>Performance Analytics</span></a></nav></div><div class="p-space-md bg-surface-container-low space-y-space-md"><div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-md text-label-md text-on-surface-variant">Teaching Target</span><span class="font-label-tabular text-label-tabular text-primary font-bold">4.5 / 6.0 hrs</span></div><div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 75%"></div></div><div class="flex justify-between items-center mt-space-xs font-caption text-caption text-on-surface-variant"><span>1.5 hrs remaining</span><span>75%</span></div></div><a class="flex items-center justify-center gap-space-sm w-full py-space-sm px-space-md rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg hover:bg-error hover:text-on-error transition-colors" href="#"><span class="material-symbols-outlined text-base">emergency</span><span>Emergency Desk</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-high"><span class="material-symbols-outlined text-primary text-base">co_present</span><span class="font-label-lg text-label-lg text-on-surface">Coach Workspace - Elena Rostova, Senior Coach</span><span class="material-symbols-outlined text-on-surface-variant text-sm">arrow_drop_down</span></div><div class="flex items-center gap-space-xs"><span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full font-caption text-caption font-semibold bg-tertiary-fixed text-on-tertiary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>On Duty</span><span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full font-caption text-caption font-semibold bg-secondary-fixed text-on-secondary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Court 1 &amp; Gym A</span></div></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-lg pointer-events-none">search</span><input class="h-10 pl-9 pr-space-md bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-secondary w-64 transition-all" placeholder="Search athletes, rosters, drills..." type="text"/></div><button class="relative p-space-xs rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZ_zi8CdKE-UhCCs1MN1314ZzpzXX26OFvxXiYGChy0I5ZchYrC8-n95lye4g_8XvE8obu0KH-MgNOUv6I_9QDcF2WdYC3yJlCNfBwtBBmkLqiNe0Wn2K540HroVtTld2o-S86RI0vcXQtdz5ZIrAx7nX8wZVY3opiMNCcMVuwjNc7y3mlgCvNUAjLdP9a9PRAS_6yuo_dfRtcGRgB7h9q4xYL_qcJw0EL6iW3NGyULdeyaQ12agW"/><span class="font-label-md text-label-md text-on-surface hidden lg:inline-block">Coach Rostova</span></div></div></header><main class="relative pt-16 w-full px-space-xl py-space-lg bg-surface"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Session Meta Bar -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-caption text-caption uppercase tracking-wider font-semibold text-primary">Microcycle Builder</span>
+<span class="font-caption text-caption">•</span>
+<span class="font-caption text-caption">Session Code: APX-WK4-COMP</span>
+</div>
+<input class="font-headline-md text-headline-md text-on-surface bg-transparent focus:outline-none focus:bg-surface-container-low px-2 -mx-2 rounded-lg transition-colors placeholder:text-on-surface-variant" placeholder="Enter Plan Title..." type="text" value="Elite Pre-Tournament Microcycle - Week 4"/>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">bookmark_border</span>
+<span>Save as Template</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Print Session Card</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md transition-all shadow-md hover:shadow" type="button">
+<span class="material-symbols-outlined text-base">rocket_launch</span>
+<span>Publish to Student App</span>
+</button>
+</div>
+</div>
+<!-- Parameter Dropdowns Bar -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-low">
+<label class="font-caption text-caption text-on-surface-variant uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">group</span> Cohort / Student
+        </label>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">Julian Vance &amp; U-16 Squad</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-low">
+<label class="font-caption text-caption text-on-surface-variant uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">sports_tennis</span> Discipline
+        </label>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">High Performance Tennis</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-low">
+<label class="font-caption text-caption text-on-surface-variant uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">pace</span> Training Phase
+        </label>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">Competition Prep / Peak Power</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-low">
+<label class="font-caption text-caption text-on-surface-variant uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">timer</span> Scheduled Duration
+        </label>
+<div class="flex items-center justify-between">
+<span class="font-label-tabular text-label-tabular text-on-surface font-bold">60 Mins • Court 1</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption font-bold">READY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Copilot Engine Banner -->
+<section class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary-container via-surface-tint to-secondary-container p-space-lg text-on-primary-container shadow-md">
+<!-- Ambient Radial Overlay -->
+<div class="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-tertiary-fixed-dim/20 blur-3xl"></div>
+<div class="pointer-events-none absolute left-1/3 -bottom-16 h-56 w-56 rounded-full bg-secondary-fixed/20 blur-2xl"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Heading & Bio Insight Prompt -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="p-space-sm rounded-xl bg-surface-container-lowest/15 backdrop-blur-md text-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption font-bold">
+<span class="material-symbols-outlined text-xs">auto_awesome</span> Apex AI Co-Pilot v4.2
+              </span>
+<span class="font-caption text-caption text-surface-container-lowest/90 font-medium">Real-Time Telemetry Synced</span>
+</div>
+<p class="font-body-lg text-body-lg text-surface-container-lowest font-medium max-w-3xl leading-snug">
+              Adaptive drills &amp; volume periodization synthesized from Julian's 14-day shoulder kinematics, resting HRV <span class="font-bold underline decoration-tertiary-fixed underline-offset-2">92%</span> (Green Zone), and upcoming State Open in <span class="font-bold text-tertiary-fixed">12 days</span>.
+            </p>
+</div>
+</div>
+<!-- Generate Trigger -->
+<button class="group shrink-0 inline-flex items-center gap-space-sm px-space-lg py-space-md rounded-xl bg-surface-container-lowest text-primary font-headline-sm text-headline-sm shadow-xl hover:bg-surface-container-high transition-all transform hover:-translate-y-0.5 active:translate-y-0" id="ai-generate-btn" type="button">
+<span class="material-symbols-outlined text-2xl text-primary group-hover:rotate-12 transition-transform">auto_awesome</span>
+<span>Generate AI Drills</span>
+</button>
+</div>
+<!-- Live Biomarker & Parameter Chips -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="font-caption text-caption uppercase text-surface-container-lowest/70 font-semibold mr-1">Active Constraints:</span>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-surface-container-lowest font-label-md text-label-md">
+<span class="material-symbols-outlined text-xs text-tertiary-fixed">target</span>
+<span>Focus: Kick Serve &amp; Transition Volleys</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-surface-container-lowest font-label-md text-label-md">
+<span class="material-symbols-outlined text-xs text-error-container">local_fire_department</span>
+<span>Intensity: High (RPE 8.0)</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-surface-container-lowest font-label-md text-label-md">
+<span class="material-symbols-outlined text-xs text-secondary-fixed">timer</span>
+<span>Duration: 60 Mins</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-surface-container-lowest font-label-md text-label-md">
+<span class="material-symbols-outlined text-xs text-tertiary-fixed">health_and_safety</span>
+<span>Prehab: Right Infraspinatus Clearance</span>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Output Preview Ribbon -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AI Synthesis Preview (4 Modular Blocks • 60 min total)</h3>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" id="regenerate-btn" type="button">
+<span class="material-symbols-outlined text-sm">refresh</span> Regenerate
+        </button>
+<button class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-colors shadow-sm" id="apply-ai-btn" type="button">
+<span class="material-symbols-outlined text-sm">playlist_add_check</span> Apply to Training Plan
+        </button>
+</div>
+</div>
+<!-- 4 AI Structured Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Block 1 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors gap-space-md relative overflow-hidden group">
+<div class="absolute top-0 left-0 h-1 w-full bg-secondary"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-caption text-caption font-semibold">
+<span class="uppercase text-secondary">Block 01 • Activation</span>
+<span class="font-label-tabular text-label-tabular text-on-surface bg-surface-container px-1.5 py-0.5 rounded font-bold">12 Min</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Dynamic Neuromuscular Warmup</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Resistance band external rotation, dynamic thoracic openers &amp; split-step court sprints with visual LED gates.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-caption text-caption">
+<span class="flex items-center gap-1 font-semibold text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>RPE 5.5 Target</span>
+<span>Bands + Cones</span>
+</div>
+</div>
+<!-- Block 2 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors gap-space-md relative overflow-hidden group">
+<div class="absolute top-0 left-0 h-1 w-full bg-primary"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-caption text-caption font-semibold">
+<span class="uppercase text-primary">Block 02 • Technical Primary</span>
+<span class="font-label-tabular text-label-tabular text-on-surface bg-surface-container px-1.5 py-0.5 rounded font-bold">20 Min</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Serve Precision &amp; Kick Bounce</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            4 target coordinate cones in Deuce court; target kick bounce &gt;82 km/h at 1.85m apex shoulder height. High toss angle constraint.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-caption text-caption">
+<span class="flex items-center gap-1 font-semibold text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Radar Speed Gun</span>
+<span>48 Serves Max</span>
+</div>
+</div>
+<!-- Block 3 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors gap-space-md relative overflow-hidden group">
+<div class="absolute top-0 left-0 h-1 w-full bg-secondary-container"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-caption text-caption font-semibold">
+<span class="uppercase text-secondary-container">Block 03 • Pressure Dynamic</span>
+<span class="font-label-tabular text-label-tabular text-on-surface bg-surface-container px-1.5 py-0.5 rounded font-bold">18 Min</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Cross-Court Volley Pressure</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Coach rapid feeds off baseline with changing slice and heavy topspin. Focus on Julian closing gap from service line to net under 1.2s.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-caption text-caption">
+<span class="flex items-center gap-1 font-semibold text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>RPE 8.5 Max</span>
+<span>Net Live Arena</span>
+</div>
+</div>
+<!-- Block 4 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors gap-space-md relative overflow-hidden group">
+<div class="absolute top-0 left-0 h-1 w-full bg-tertiary"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-caption text-caption font-semibold">
+<span class="uppercase text-tertiary">Block 04 • Recovery</span>
+<span class="font-label-tabular text-label-tabular text-on-surface bg-surface-container px-1.5 py-0.5 rounded font-bold">10 Min</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Cool-Down &amp; Shoulder Prehab</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Pec minor myofascial release, static posterior capsule stretches, followed by 5-min cold immersion at 12°C in Hydro-Lab.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-caption text-caption">
+<span class="flex items-center gap-1 font-semibold text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Hydro Therapy</span>
+<span>HR &lt; 95 BPM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Workspace Bento: Exercise Library (Left) vs Active Plan Sequence (Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Categorized Drill Library -->
+<section class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Exercise &amp; Drill Library</h3>
+<span class="font-caption text-caption bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant font-semibold">142 Drills</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Filter standardized academy drills and insert directly into timeline blocks.</p>
+</div>
+<!-- Filter Category Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1" id="drill-tabs">
+<button class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md shrink-0" type="button">All Drills</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-colors" type="button">Warmup</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-colors" type="button">Stroke Technique</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-colors" type="button">Footwork</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-colors" type="button">Tactical</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-colors" type="button">Conditioning</button>
+</div>
+<!-- Search Drill Input -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-lg pointer-events-none">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-colors" placeholder="Search drill by name, muscle group, or intensity..." type="text"/>
+</div>
+<!-- Drill Cards Stack -->
+<div class="flex flex-col gap-space-sm overflow-y-auto max-h-[580px] pr-1">
+<!-- Drill Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between gap-space-sm group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-xl">fit_screen</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Figure-8 Kinetic Footwork Ladder</span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant">
+<span>Footwork</span>
+<span>•</span>
+<span class="text-secondary font-semibold">Medium Intensity</span>
+<span>•</span>
+<span>8 min</span>
+</div>
+</div>
+</div>
+<button class="shrink-0 p-2 rounded-lg bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface transition-all flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+<!-- Drill Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between gap-space-sm group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-xl">sports_tennis</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Open-Stance Forehand Heavy Topspin</span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant">
+<span>Stroke Technique</span>
+<span>•</span>
+<span class="text-error font-semibold">High Intensity</span>
+<span>•</span>
+<span>15 min</span>
+</div>
+</div>
+</div>
+<button class="shrink-0 p-2 rounded-lg bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface transition-all flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+<!-- Drill Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between gap-space-sm group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-xl">rotate_right</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Rotator Cuff Resistance Band Circuit</span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant">
+<span>Warmup / Prehab</span>
+<span>•</span>
+<span class="text-primary font-semibold">Low Intensity</span>
+<span>•</span>
+<span>10 min</span>
+</div>
+</div>
+</div>
+<button class="shrink-0 p-2 rounded-lg bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface transition-all flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+<!-- Drill Item 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between gap-space-sm group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-xl">sports_score</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Serve-Plus-One Inside-Out Pattern</span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant">
+<span>Tactical</span>
+<span>•</span>
+<span class="text-error font-semibold">High Intensity</span>
+<span>•</span>
+<span>20 min</span>
+</div>
+</div>
+</div>
+<button class="shrink-0 p-2 rounded-lg bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface transition-all flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+<!-- Drill Item 5 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between gap-space-sm group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-xl">speed</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Hexagon Agility Ball Reflex Drill</span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant">
+<span>Conditioning</span>
+<span>•</span>
+<span class="text-secondary font-semibold">RPE 7.5</span>
+<span>•</span>
+<span>12 min</span>
+</div>
+</div>
+</div>
+<button class="shrink-0 p-2 rounded-lg bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface transition-all flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right Column: Active Training Plan Queue (Interactive Timeline) -->
+<section class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Timeline &amp; Drag Queue</h3>
+<span class="font-caption text-caption px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">4 Active Blocks</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Drag to reorder intervals or adjust intensity constraints on court.</p>
+</div>
+<!-- Load Intensity Dial -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-xs rounded-lg">
+<div class="flex flex-col text-right">
+<span class="font-caption text-caption text-on-surface-variant uppercase font-semibold">Accumulated RPE</span>
+<span class="font-stat-value text-stat-value text-primary leading-none">7.8</span>
+</div>
+<div class="w-10 h-10 relative flex items-center justify-center">
+<!-- Inline Mini Radial -->
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="78, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="material-symbols-outlined text-xs absolute text-primary">bolt</span>
+</div>
+</div>
+</div>
+<!-- Timeline Block Queue Container -->
+<div class="flex flex-col gap-space-sm" id="plan-queue">
+<!-- Item 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all shadow-sm group cursor-move">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-lg opacity-40 group-hover:opacity-100 transition-opacity">drag_indicator</span>
+<span class="font-caption text-caption font-bold text-secondary">01</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="High performance tennis athlete using dynamic resistance band exercises on indoor blue hardcourt for shoulder warmup, professional lighting, athlete in athletic apparel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQYoj8Y2xzpkAQga9004tVj1xthhQtsdhTrzr7tphfgbMUp4Fh02rSNfs5I70evwIBW2MXOHCkxhNqltHRwcllSqNaipaBQ_L-iB7bAgp9NCGuC8bka6ucEmwpyNYnRRwXzjxtop369DZkiC3dxkVlU1oIl5JHasknXlBXlsAzAlAp1x9mExz0ICVF0VvRwBKJ9ACI-cyigzS98X-YCvdPZ82xz9fvB-fBX6wgk91PUouu651oGzfX"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Dynamic Neuromuscular Warmup</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Warmup</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Elastic scapular stabilization + court sprint gates</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md shrink-0">
+<div class="flex flex-col text-right font-caption text-caption text-on-surface-variant">
+<span class="font-label-tabular text-label-tabular text-on-surface font-bold">12 mins</span>
+<span>Target HR: 120-135</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Adjust Parameters" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-error hover:bg-error-container transition-colors" title="Remove Block" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all shadow-sm group cursor-move">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-lg opacity-40 group-hover:opacity-100 transition-opacity">drag_indicator</span>
+<span class="font-caption text-caption font-bold text-primary">02</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Tennis coach observing young elite player executing a powerful kick serve on tournament court with speed radar sensor visible in background, bright energetic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtoOA11A78IrtIkM5xk9FDyzSAA83I3lrtMBvk-KWeRXCGIP7GF-ZyIfq74adQjX9GYUS08ib7F6hGR3-7m4BXbhXU2YfvHoAN0TVeCCxvelZ7lmzR05a0ElvGosjbq2JQd0NitDHrjbU6sbiuNXd3zX3gKQ19c4HVBQQHIsRNY4489it6yS_cWmrLR6szC2cKuezXJQ81RAw-OGFAchuYh9USITGUM0jRpbZogQknnawm1GFkAVVG"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Serve Precision &amp; Kick Angle Drills</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Technical</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">4 target zones, min 80kmh bounce threshold</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md shrink-0">
+<div class="flex flex-col text-right font-caption text-caption text-on-surface-variant">
+<span class="font-label-tabular text-label-tabular text-on-surface font-bold">20 mins</span>
+<span>48 Max Serves</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Adjust Parameters" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-error hover:bg-error-container transition-colors" title="Remove Block" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all shadow-sm group cursor-move">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-lg opacity-40 group-hover:opacity-100 transition-opacity">drag_indicator</span>
+<span class="font-caption text-caption font-bold text-secondary-container">03</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Athletic male tennis player lunging for a fast reflex volley near the net, rapid ball blur effect, hyper-focused expression, clean indoor tennis facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmrIeBfEH58f-jzjIxbBV0AyfkVhBR4hRiG80TAvnn94BAq9Tb1jCb_7SEtKPxYR0pTnScePwWcwoPRz8_9b3RHbSCuiWouI7dCmcZCPrM33s1IV80wXHPSdM71YNjiiChRhAk0yKGiWMxK9UcSwNu5HHL_3PdbVhwACexE6BalN80pR0EgefFka2QtLz2y5ZFDdmgSX2NRswQnpAy-zocCGYAn8oUWz5ragL8Nw-uSTtR3M3dtLTZ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Cross-Court Volley Pressure Matrix</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Pressure</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">High tempo feeding with sudden topspin dips</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md shrink-0">
+<div class="flex flex-col text-right font-caption text-caption text-on-surface-variant">
+<span class="font-label-tabular text-label-tabular text-on-surface font-bold">18 mins</span>
+<span>RPE 8.5 / High Peak</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Adjust Parameters" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-error hover:bg-error-container transition-colors" title="Remove Block" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md transition-all shadow-sm group cursor-move">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-lg opacity-40 group-hover:opacity-100 transition-opacity">drag_indicator</span>
+<span class="font-caption text-caption font-bold text-tertiary">04</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-2xl">spa</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Cool-Down &amp; Cryo-Recovery Protocol</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Post-Session</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Shoulder capsule release &amp; 12°C immersion</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md shrink-0">
+<div class="flex flex-col text-right font-caption text-caption text-on-surface-variant">
+<span class="font-label-tabular text-label-tabular text-on-surface font-bold">10 mins</span>
+<span>Recovery Rate 96%</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Adjust Parameters" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-error hover:bg-error-container transition-colors" title="Remove Block" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Custom Empty Slot Button -->
+<button class="w-full py-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-space-xs font-label-md text-label-md transition-colors border-dashed border-2 border-outline-variant/30" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>Insert Custom Drill Interval</span>
+</button>
+<!-- Periodization Timeline Bar -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant uppercase font-semibold">
+<span>Session Intensity Breakdown</span>
+<span class="text-primary font-bold">60 Min Total / High Readiness</span>
+</div>
+<div class="h-3 w-full rounded-full bg-surface-container flex overflow-hidden">
+<div class="bg-secondary h-full" style="width: 20%" title="Warmup: 12 min (20%)"></div>
+<div class="bg-primary h-full" style="width: 33%" title="Kick Serve: 20 min (33%)"></div>
+<div class="bg-secondary-container h-full" style="width: 30%" title="Volley Pressure: 18 min (30%)"></div>
+<div class="bg-tertiary h-full" style="width: 17%" title="Cool-Down: 10 min (17%)"></div>
+</div>
+<div class="flex flex-wrap items-center justify-between text-caption font-caption text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span>0-12m: Prep</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span>12-32m: Kick Precision</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary-container"></span>32-50m: Match Matrix</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span>50-60m: Cryo/Regen</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Toast / Feedback Bar (Interactive state simulated) -->
+<div class="hidden fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm transition-all transform translate-y-2" id="ai-toast">
+<span class="material-symbols-outlined text-tertiary-fixed">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toast-message">Plan applied successfully to Julian's mobile app schedule.</span>
+</div>
+</div>
+<script>
+  // Simple interactive feedback for coach actions
+  const generateBtn = document.getElementById('ai-generate-btn');
+  const regenBtn = document.getElementById('regenerate-btn');
+  const applyBtn = document.getElementById('apply-ai-btn');
+  const toast = document.getElementById('ai-toast');
+  const toastMsg = document.getElementById('toast-message');
+
+  function triggerToast(message) {
+    if (!toast) return;
+    toastMsg.textContent = message;
+    toast.classList.remove('hidden', 'translate-y-2');
+    setTimeout(() => {
+      toast.classList.add('hidden', 'translate-y-2');
+    }, 3200);
+  }
+
+  if (generateBtn) {
+    generateBtn.addEventListener('click', () => {
+      generateBtn.classList.add('opacity-75');
+      triggerToast('Synthesizing 14-day biomechanics and tournament requirements...');
+      setTimeout(() => {
+        generateBtn.classList.remove('opacity-75');
+        triggerToast('AI Drills successfully regenerated with updated RPE 8.0 target!');
+      }, 1000);
+    });
+  }
+
+  if (regenBtn) {
+    regenBtn.addEventListener('click', () => {
+      triggerToast('Re-balancing volley drill sets with adaptive rest intervals...');
+    });
+  }
+
+  if (applyBtn) {
+    applyBtn.addEventListener('click', () => {
+      triggerToast('AI generated blocks locked into Julian Vance’s microcycle!');
+    });
+  }
+
+  // Filter tabs visual toggle
+  const drillTabs = document.querySelectorAll('#drill-tabs button');
+  drillTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      drillTabs.forEach(t => {
+        t.className = 'px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-colors';
+      });
+      tab.className = 'px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md shrink-0';
+    });
+  });
+</script></main></div></body></html>

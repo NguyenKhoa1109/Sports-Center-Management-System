@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#006c4a", "on-secondary-container": "#fefcff", "surface-container-low": "#f2f3ff", "on-background": "#131b2e", "inverse-on-surface": "#eef0ff", "surface": "#faf8ff", "tertiary-fixed-dim": "#4edea3", "primary-container": "#00855d", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#005137", "on-secondary-fixed": "#00174b", "error": "#ba1a1a", "surface-container": "#eaedff", "on-secondary-fixed-variant": "#003ea8", "on-surface-variant": "#3d4a42", "inverse-primary": "#68dba9", "on-tertiary-container": "#f5fff6", "on-primary-container": "#f5fff7", "on-primary-fixed": "#002114", "error-container": "#ffdad6", "inverse-surface": "#283044", "on-tertiary-fixed-variant": "#005236", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "secondary-container": "#316bf3", "secondary": "#0051d5", "surface-variant": "#dae2fd", "background": "#faf8ff", "primary-fixed-dim": "#68dba9", "secondary-fixed": "#dbe1ff", "primary-fixed": "#85f8c4", "on-error": "#ffffff", "outline": "#6d7a72", "surface-dim": "#d2d9f4", "on-primary": "#ffffff", "on-tertiary-fixed": "#002113", "tertiary-fixed": "#6ffbbe", "tertiary-container": "#00855b", "outline-variant": "bccac0", "primary": "#006948", "surface-bright": "#faf8ff", "tertiary": "#006947", "secondary-fixed-dim": "#b4c5ff", "on-surface": "#131b2e", "on-tertiary": "#ffffff", "surface-container-highest": "#dae2fd", "surface-container-high": "#e2e7ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-2xl": "3rem", "margin-mobile": "1rem", "gutter": "1.5rem", "gutter-lg": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-md": "1rem", "margin": "2rem", "space-xl": "2rem" }, "fontFamily": { "body-sm": ["Inter"], "display": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-tabular": ["Inter"], "caption": ["Inter"], "stat-value": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-tabular": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "caption": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "stat-value": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Brand logo. - Primary color: #059669 - Font: plusJakartaSans - Mode: light - Roundness: rounded-md" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WXC6pdqgNL5BSlI8ck8CUPCB51yyf6bOEQ3htC5fi8dB9XbRa_xDMEAfo_jSO_f5C-Sl5fS0uKgyAIG3eTsf5gbdao9j1VQFzGfpKpi9-zsnF4guVzuuXD6OHy2UwKsN3LwdqGW45iMyFnG_8P0kZ0NFi_-rkqxh-X55KlZoeADG9a9lSQVcxdU-2HBBjtPL7dqEtbCSq0MBfNLwnfwpxOAmIic90St5x9IUQPxkh-aURSuv07hOskGcc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Apex Sports</span><span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Coach Portal</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-lg">sports</span><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-none">High Performance</span><span class="font-caption text-caption text-on-surface-variant">Tennis &amp; Athletic Dev</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-base">unfold_more</span></div></div><nav class="flex-1 px-space-sm space-y-1 mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="schedule-and-classes" href="#"><span class="material-symbols-outlined text-xl">calendar_month</span><span>Schedule &amp; Classes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rosters-and-attendance" href="#"><span class="material-symbols-outlined text-xl">how_to_reg</span><span>Rosters &amp; Attendance</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="player-evaluations" href="#"><span class="material-symbols-outlined text-xl">assessment</span><span>Player Evaluations</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="training-plans-and-ai" href="#"><span class="material-symbols-outlined text-xl">psychology</span><span>Training Plans &amp; AI</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="student-messaging" href="#"><span class="material-symbols-outlined text-xl">chat</span><span>Student Messaging</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="performance-analytics" href="#"><span class="material-symbols-outlined text-xl">insights</span><span>Performance Analytics</span></a></nav></div><div class="p-space-md bg-surface-container-low space-y-space-md"><div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-md text-label-md text-on-surface-variant">Teaching Target</span><span class="font-label-tabular text-label-tabular text-primary font-bold">4.5 / 6.0 hrs</span></div><div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 75%"></div></div><div class="flex justify-between items-center mt-space-xs font-caption text-caption text-on-surface-variant"><span>1.5 hrs remaining</span><span>75%</span></div></div><a class="flex items-center justify-center gap-space-sm w-full py-space-sm px-space-md rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg hover:bg-error hover:text-on-error transition-colors" href="#"><span class="material-symbols-outlined text-base">emergency</span><span>Emergency Desk</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-high"><span class="material-symbols-outlined text-primary text-base">co_present</span><span class="font-label-lg text-label-lg text-on-surface">Coach Workspace - Elena Rostova, Senior Coach</span><span class="material-symbols-outlined text-on-surface-variant text-sm">arrow_drop_down</span></div><div class="flex items-center gap-space-xs"><span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full font-caption text-caption font-semibold bg-tertiary-fixed text-on-tertiary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>On Duty</span><span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full font-caption text-caption font-semibold bg-secondary-fixed text-on-secondary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Court 1 &amp; Gym A</span></div></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-lg pointer-events-none">search</span><input class="h-10 pl-9 pr-space-md bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-secondary w-64 transition-all" placeholder="Search athletes, rosters, drills..." type="text"/></div><button class="relative p-space-xs rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZ_zi8CdKE-UhCCs1MN1314ZzpzXX26OFvxXiYGChy0I5ZchYrC8-n95lye4g_8XvE8obu0KH-MgNOUv6I_9QDcF2WdYC3yJlCNfBwtBBmkLqiNe0Wn2K540HroVtTld2o-S86RI0vcXQtdz5ZIrAx7nX8wZVY3opiMNCcMVuwjNc7y3mlgCvNUAjLdP9a9PRAS_6yuo_dfRtcGRgB7h9q4xYL_qcJw0EL6iW3NGyULdeyaQ12agW"/><span class="font-label-md text-label-md text-on-surface hidden lg:inline-block">Coach Rostova</span></div></div></header><main class="relative pt-16 w-full px-space-xl py-space-lg bg-surface"><div class="flex flex-col w-full space-y-gutter">
+<!-- Class Context Hero Banner with Tactical Telemetry -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-gutter shadow-sm">
+<!-- Atmospheric subtle backdrop glow -->
+<div class="absolute -right-20 -top-24 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 -bottom-24 w-72 h-72 rounded-full bg-secondary/5 blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col xl:flex-row xl:items-center justify-between gap-gutter">
+<!-- Session Identifiers & Context -->
+<div class="space-y-space-xs max-w-2xl">
+<div class="flex flex-wrap items-center gap-space-sm text-caption">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full font-label-md bg-primary-container text-on-primary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span>
+            LIVE SESSION
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-sm text-primary">sports_tennis</span>
+            Court 1 Red Clay (Outdoor)
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-sm">schedule</span>
+            14:00 - 15:30 (42m elapsed)
+          </span>
+</div>
+<div class="pt-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            High-Performance Drills &amp; Match Play
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Phase 3: High-velocity transition footwork, crosscourt baseline depth, and tie-break simulation under fatigue.
+          </p>
+</div>
+<!-- Coach & Supervision Chips -->
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-sm bg-surface-container px-space-sm py-1 rounded-lg">
+<div class="relative">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Elena Rostova senior tennis coach headshot wearing official dark green performance athletic polo looking confident outdoors on court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD12HCL8YYnwRuqP2KrSaWyvwAEdwY9osHTWCOQWV2p4R6mhkpn3ZKd2mr7vXzJzERFy5c-PwSrpvyKxzkXiWg5rGp-ujpRGwZqR8v1ZdL6BXcC8IFCqx9i_LATTHWhhdTa-K33ACeGzUlZbY60ru8wjSCDKU2n15rKxxsel7G9MZyZMQvqvrPmEoijGSMbUH5e2huAmLI8F3ge-CTFznUD9dCOVwJSADIUmhefZAPhCFpOyb7Vc5R4"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface leading-tight">Coach Elena Rostova</span>
+<span class="font-caption text-caption text-on-surface-variant">Lead Tactical Evaluator</span>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 text-caption font-caption text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-primary">sensors</span>
+            Smart Sensor Court Sync Active
+          </div>
+</div>
+</div>
+<!-- Quick Metrics & Tactical Bulk Controls -->
+<div class="flex flex-col sm:flex-row xl:flex-col items-start xl:items-end justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-baseline gap-space-md">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Attendance Status</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-stat-value text-stat-value text-primary font-extrabold tracking-tight" id="counter-present">8</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant font-normal">/ 10</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold ml-1">Present</span>
+</div>
+</div>
+<div class="flex flex-col pl-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface text-caption font-semibold" id="badge-unchecked">2 Unchecked</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container text-caption font-semibold" id="badge-absent">0 Absent</span>
+</div>
+<div class="w-36 bg-surface-container-high h-2 rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full rounded-full transition-all duration-300" id="attendance-progress" style="width: 80%"></div>
+</div>
+</div>
+</div>
+<!-- Action triggers -->
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-all shadow-sm" id="btn-mark-all" type="button">
+<span class="material-symbols-outlined text-lg">done_all</span>
+<span>Mark All Present</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors" id="btn-export-sheet" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+<span class="hidden md:inline">Export Sheet</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Readiness Overview Bento Metric Strip -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Cohort Biometric Readiness</span>
+<div class="flex items-baseline gap-2">
+<span class="font-stat-value text-stat-value text-on-surface">88.4%</span>
+<span class="font-caption text-caption text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> +3.1% vs Mon
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">9 athletes cleared for anaerobic peak workload</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="88, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Gear &amp; Uniform Compliance</span>
+<div class="flex items-baseline gap-2">
+<span class="font-stat-value text-stat-value text-on-surface">100%</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption font-bold">Passed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Standard clay shoes &amp; heart-rate monitors verified</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Average Cohort Rating</span>
+<div class="flex items-baseline gap-2">
+<span class="font-stat-value text-stat-value text-secondary">UTR 9.42</span>
+<span class="font-caption text-caption text-on-surface-variant">Tier-1 Elite</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">State and National U-16 Championship Pool</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-2xl">military_tech</span>
+</div>
+</div>
+</section>
+<!-- Granular Attendance & Readiness Table Card -->
+<section class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Toolbar -->
+<div class="px-gutter py-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Roster Roster Call</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-tabular text-label-tabular">10 Athletes</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1 text-caption font-caption text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Present
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-500 ml-2"></span> Late
+          <span class="w-2.5 h-2.5 rounded-full bg-error ml-2"></span> Absent
+        </div>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="py-space-sm px-gutter font-caption text-caption uppercase text-on-surface-variant font-semibold">Student / Athletic Rank</th>
+<th class="py-space-sm px-space-md font-caption text-caption uppercase text-on-surface-variant font-semibold">Attendance Status</th>
+<th class="py-space-sm px-space-md font-caption text-caption uppercase text-on-surface-variant font-semibold">Physical Readiness</th>
+<th class="py-space-sm px-space-md font-caption text-caption uppercase text-on-surface-variant font-semibold">Kit / Equipment</th>
+<th class="py-space-sm px-space-md font-caption text-caption uppercase text-on-surface-variant font-semibold">Technical Focus &amp; PR</th>
+<th class="py-space-sm px-gutter font-caption text-caption uppercase text-on-surface-variant font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm" id="student-roster-body">
+<!-- 1. Leo Martinez -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row" data-id="1" data-status="present">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Teenage male tennis athlete portrait Leo Martinez wearing green sports headband outdoor courts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmvUxMdfQN8xJxdye7U77RXGa8S41me_rCSMaV5F5LS9mE05FBA8DQIZjCy8yVyMxjgcTvx8A7AWtp871KijNecqDYQU0KVw_e-ml80IIbosZXTHHiUOKBX28DxEokBUPLWMbULFbX8OUE0LIu38f6MVxUmQJsIf3DPRmGsWVrOiHvJrEZ-a7jJxNku8kqmCgqFhgR0oj_YDtGiddRaEILivmkG4XH46WHCpCd29S7rj88aXCErGKL"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Leo Martinez</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold">UTR 10.4</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 15 • Nat. U-16 Rank #4 • Right Hand</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 94%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-primary">94%</span>
+<span class="material-symbols-outlined text-primary text-base" title="Optimal autonomic balance">bolt</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Approved Clay V1
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">PR: Serve 114 mph</span>
+<span class="font-caption text-caption text-on-surface-variant">Kick-serve trajectory angle</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 2. Maya Lin -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row" data-id="2" data-status="present">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Young female tennis player Maya Lin tied back hair wearing official athletic visor with intense athletic gaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZ3BfVIMrA51TkBa-LC2oNmXoQWbH0T3Ya5VTFR0yE8t6EHh4LQ65IuaGKyFvdsaQWq1CIpcMMzGWfh4ev3a1eheCOVcwXoBw4FqCHeNM3g5SMiRlL6c2akRjxyjbuGyLi1Q1otT7BNeCwG480hXQXGURy5qAv8qB5jNedpk75hZaLU1EEVgBhBLfi5Wx6_0eaFZe7YqXVNtFbVsbh6VCTWSYwaB58zKxpSJWuUhahagGBD6AFfOn"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Maya Lin</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold">UTR 9.8</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 14 • U-14 State Finalist • Two-Handed Backhand</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 91%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-primary">91%</span>
+<span class="material-symbols-outlined text-primary text-base">bolt</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Yonex EZONE 98
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Focus: Heavy topspin depth</span>
+<span class="font-caption text-caption text-on-surface-variant">Deep court baseline consistency</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 3. Julian Vance -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row" data-id="3" data-status="present">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Athletic teen tennis player Julian Vance in green athletic shirt focused on tennis drill session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5EMIb1FJr6v6yGXsWaiIqk5Wpco2ZTczIvgEgrKQgJUQpS8zSsTAH7T2Nh6RIUueIpPnjJo5VxEgbkywlnyFC_KAJArWo4kYOJUcmtnFJEiNN-cVuwNjtPlXNLsiEMcQwzMHNtL_ZmD8C1sKyMMRSRUYA9POmVIj3Gmpgtd_12NRTMj_RoR_G2tkVj4cOwbcu117y3x_pm8DK3Ou85iUXhk93Mt1LbZzwgBaOyKD9YOqP39zekNY2"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Julian Vance</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption font-bold">Tier 1 Elite</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 16 • UTR 10.1 • Regional Seed #2</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 74%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-amber-700">74%</span>
+<span class="material-symbols-outlined text-amber-600 text-base" title="Mild shoulder fatigue flag">warning</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Kinesio Shoulder Tape
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">PR: 24-shot rally tempo</span>
+<span class="font-caption text-caption text-on-surface-variant">Limiting overhead smash torque</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 4. Sophia Chen -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row" data-id="4" data-status="present">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of young Asian female tennis champion Sophia Chen with athletic posture ready on clay court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCjFoo_SRcN3HwLuemm8BchGdmnF-IHcIXqFPb1MUj5mNuQ-KhDpJ7HydLon9Se4KmJjJbJQz52wKZtko3Crtprlt-7wMkSZBykbLL_DL0G8pfrz0osu_4uNlSUxZVBnUd2XgrYrS-PcL5gqMrpo10sppHpHZNulpaPnATCy1Rp86aKCcZP6n2diBY5O4lG8rz_0869TsRb0NgxGJot-0WK-uFFzxxo0IqeqxhjRTQgf5eckS1BdaA"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Sophia Chen</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold">UTR 9.5</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 15 • Elite Academy Team • Aggressive Baseliner</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 96%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-primary">96%</span>
+<span class="material-symbols-outlined text-primary text-base">bolt</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Polar H10 HRM Synced
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Focus: Return of 1st serve</span>
+<span class="font-caption text-caption text-on-surface-variant">Short block split-step drill</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 5. Marcus Thorne Jr. -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row" data-id="5" data-status="present">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of tall male tennis prospect Marcus Thorne Jr wearing dark athletic gear on sunny outdoor tennis court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtvhEXjbgug4CjGmXHybyQry-vF5qYW1N-U3_xFEWtO1joJeivlbTrXYHzHH5VKSn6seVbO33ZpqvdG6uaJ1QPAC-p9l5MSqhLLf0oRbYAkLplJ4srYbAn2eQfp4_wa4Nd00D-kB-Nxz_KppTsXOWrvnn0nSAgBd1gR75Obq6xvcm0rSuiE2UTmNUjmn9bSRgp3kbwXDm5OKv1qAYQFvpk0xrtHZwVcrKuNllay54qTxcP2YhmxTFC"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Marcus Thorne Jr.</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold">UTR 9.9</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 16 • All-State Quarterfinalist • Big Server</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-primary">88%</span>
+<span class="material-symbols-outlined text-primary text-base">bolt</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Babolat Pure Aero 300g
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">PR: Serve 118 mph</span>
+<span class="font-caption text-caption text-on-surface-variant">2nd serve kick consistency</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 6. Chloe Bennett -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row" data-id="6" data-status="present">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Chloe Bennett young female athlete smiling gently holding tennis racquet by net on clay court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCKiA41x70zemUJ5tKf2OvjoGacw0Zsr7t9z90VbHZ2J09ndW72PtRYt_YULMTxfp3UWm0aAL-zsb-1ql7jK2pyL4jQowtvdlfoa3fqvdxLD4yOKzYee0pinqhP10Gt6cvKtv9U80HQlh1oWUbaojHx08nXYAxwchy3lA0SxyM9PWIXWiXlyPpk2tE3KVHFvRUKLPh-j9ktXJeVUNJiMdgd9MIthO3G3q6AVMSmTjDeLMtAMFzMxRy"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Chloe Bennett</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold">UTR 8.9</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 14 • Junior Circuit Top 10 • Counter-Puncher</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 90%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-primary">90%</span>
+<span class="material-symbols-outlined text-primary text-base">bolt</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Full Kit Verified
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Focus: Volley punch punch</span>
+<span class="font-caption text-caption text-on-surface-variant">Transition net approach</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 7. David Kalu -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row" data-id="7" data-status="present">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="High performance male tennis athlete David Kalu smiling with sports towel and academy gear in tennis facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1qnlMBUPlFm_KnlRoWUEASa-M8MEERC6hfVouCUWYqQG0q7XvDT0UvLfJogNa4SkoimEMqnvtAxFICeYH1Rd8dcqLTnoDdfOYrIJC3EQawPo8PXj9ltbl9ObHQ6_K80vqy6iPdS2CHbTz4Dtq5aeiqLMnOf5O2A5OMLIg5rVot35uD2l4yYGepYAmU2N-bQR4MANW90FdApQmKUAHG0Fz8incMaMxOnXdz7J2HXbdFPPKAe_GmGrV"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">David Kalu</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption font-bold">Tier 1 Elite</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 16 • UTR 10.3 • State Champion Doubles</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 86%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-primary">86%</span>
+<span class="material-symbols-outlined text-primary text-base">bolt</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Head Speed MP Lead-taped
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">PR: 10/10 Inside-out Forehand</span>
+<span class="font-caption text-caption text-on-surface-variant">Target accuracy session</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 8. Emma Watson -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row" data-id="8" data-status="present">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Emma Watson student tennis player portrait outdoor court with athletic visor and focused determination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQIkaARn3lxWcuavNvoknDD0L6BpCw_RwdX-wOgg0H_xKWGAdVms6MXPFK2bZNhQJKCaD9hmCgFgwlLyE9Z5eC6ZANDHNU4WdZ0vSeOryw2wPs3BqsZ9dWV4h7C4cMG22XmVTEawxmQSbjzIn4tGjmtSRKvusiEWwFrMDp0gnwBADt6cV2cg_jlJpiLoLNT48YtTpef1I4y7h4WXJ3mO-GOsCX_JR4-mmm7mnFNAEjKIcBX5cLuoZD"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Emma Watson</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold">UTR 9.1</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 15 • Level 4 Elite • All-Court Specialist</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 95%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-primary">95%</span>
+<span class="material-symbols-outlined text-primary text-base">bolt</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface font-medium">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Verified Clay Spikes
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Focus: Drop-shot recovery speed</span>
+<span class="font-caption text-caption text-on-surface-variant">Forward court acceleration test</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 9. Lucas Silva (Unchecked initially -> Late candidate) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row bg-surface-container-low/20" data-id="9" data-status="unchecked">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Lucas Silva teen athlete stretching warm up jacket on court sideline looking energetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrtLY7KH4IFqHxTeEzVbPCT3IiiY9ylSgaXD3woG0CWcrRxMI7vmAI838YmwqXmEwZNqa0J532xoN053DHuhpadyxQlTir20rJpzhoSG-xZhtNq32U1FDpoJJIdpo_7XEyPapUa5Q4-h9dG-i2CS0zGlrFN2cqGR0lrrhRh1tc_LAe4Q4qNbKoNvSOQUYZso5Aaoi3nbxHHNwf8tSV-Ay7gLgVPkHmUR_iKDsXSQJUol-CJUF1u9t8"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Lucas Silva</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold">UTR 9.3</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 16 • Regional Tier 1 • Southpaw Serve</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full rounded-full" style="width: 79%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-amber-700">79%</span>
+<span class="material-symbols-outlined text-amber-600 text-base">device_thermostat</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high font-caption text-caption text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-xs text-amber-600">help</span> In Locker / Warmup
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Focus: Lefty out-wide slice</span>
+<span class="font-caption text-caption text-on-surface-variant">Ad-court spin trajectory</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+<!-- 10. Olivia Gray (Unchecked initially -> Absent candidate) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors student-row bg-surface-container-low/20" data-id="10" data-status="unchecked">
+<td class="py-space-md px-gutter">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Olivia Gray female high performance tennis junior player in training jacket portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjFzplJzFk9K8fQoOFG3XDrQ0RA1OY2CQSyma7HP4j17Q_aJRVSeoljIeTmZleLdDZfEBqrb_czr7kC8MurCFBH5IHdsFGOTJAmrTmY48Me9sSVy5VyMdSwncu7WfIX1t-w8kHl2pj2aiCOpQIQG6IY7jY3kE6IT60_Z17GeQ6QBK2KYYMnzsoPUU2TErYPcESpK54AkBM-lq7YXOquFVPEbEHD2jrFwas7ailUFBuDC8s0W2IrkAK"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Olivia Gray</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-bold">UTR 9.6</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Age 15 • Junior State Silver • Aggressive Returner</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container gap-1 attendance-pill-group">
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="present" type="button">Present</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="late" type="button">Late</button>
+<button class="btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-target="absent" type="button">Absent</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 58%"></div>
+</div>
+<span class="font-label-tabular text-label-tabular font-bold text-error">58%</span>
+<span class="material-symbols-outlined text-error text-base">heart_broken</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-caption text-caption font-medium">
+<span class="material-symbols-outlined text-xs">pending</span> Unreported Check
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Focus: Deep diagonal sliding</span>
+<span class="font-caption text-caption text-on-surface-variant">Hamstring load caution flagged</span>
+</div>
+</td>
+<td class="py-space-md px-gutter text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-base">rate_review</span>
+<span>Quick Eval</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Quick Attendance Action Bar & Real-time Court Session Notes -->
+<section class="rounded-xl bg-surface-container-lowest p-gutter shadow-sm space-y-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Session Log & Coach Notes Input -->
+<div class="lg:col-span-7 space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-1.5 font-label-lg text-label-lg text-on-surface" for="coach-notes">
+<span class="material-symbols-outlined text-base text-primary">edit_note</span>
+            On-Court Coaching &amp; Tactical Log
+          </label>
+<span class="font-caption text-caption text-on-surface-variant">Auto-saved to Player Academy Folders</span>
+</div>
+<textarea class="w-full p-space-md rounded-xl bg-surface-container border-0 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-secondary transition-all resize-none" id="coach-notes" placeholder="Record tactical nuances, court wind adjustments, drill completion quotas, or specific athletic adjustments for this cohort..." rows="3"></textarea>
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant text-caption font-medium transition-colors" type="button">+ Clay Court High Humidity</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant text-caption font-medium transition-colors" type="button">+ High Fatigue Rotation</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant text-caption font-medium transition-colors" type="button">+ Serve Radar Calibration OK</button>
+</div>
+</div>
+<!-- Tactical Action Cluster -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-md rounded-xl space-y-space-md flex flex-col justify-between h-full">
+<div>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Operational Broadcast</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Publish confirmed presence logs directly to the central academy director terminal and push SMS notifications for absent or unexcused athletes.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-space-sm pt-space-xs">
+<!-- SMS Absentee Alert Trigger -->
+<button class="flex-1 inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-highest text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors" id="btn-sms-alert" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">sms</span>
+<span>Notify Absent Guardians</span>
+</button>
+<!-- Primary Confirmation Action -->
+<button class="flex-1 inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-all shadow-md" id="btn-save-attendance" type="button">
+<span class="material-symbols-outlined text-lg">verified</span>
+<span>Save &amp; Confirm Session</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Interactive Client-side Script for State Synchrony -->
+<script>
+  (function() {
+    const rosterRows = document.querySelectorAll('.student-row');
+    const counterPresent = document.getElementById('counter-present');
+    const badgeUnchecked = document.getElementById('badge-unchecked');
+    const badgeAbsent = document.getElementById('badge-absent');
+    const progressBar = document.getElementById('attendance-progress');
+    const btnMarkAll = document.getElementById('btn-mark-all');
+    const btnSave = document.getElementById('btn-save-attendance');
+    const btnSms = document.getElementById('btn-sms-alert');
+
+    function updateCounts() {
+      let present = 0;
+      let late = 0;
+      let absent = 0;
+      let unchecked = 0;
+
+      rosterRows.forEach(row => {
+        const status = row.getAttribute('data-status');
+        if (status === 'present') present++;
+        else if (status === 'late') late++;
+        else if (status === 'absent') absent++;
+        else unchecked++;
+      });
+
+      const effectivePresent = present + late;
+      counterPresent.innerText = effectivePresent;
+      badgeUnchecked.innerText = unchecked + ' Unchecked';
+      badgeAbsent.innerText = absent + ' Absent';
+
+      const percentage = (effectivePresent / rosterRows.length) * 100;
+      progressBar.style.width = percentage + '%';
+    }
+
+    rosterRows.forEach(row => {
+      const buttons = row.querySelectorAll('.btn-status');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-target');
+          row.setAttribute('data-status', target);
+
+          // Reset all buttons in this row
+          buttons.forEach(b => {
+            b.className = 'btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface';
+          });
+
+          // Style active button
+          if (target === 'present') {
+            btn.className = 'btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs';
+            row.classList.remove('bg-surface-container-low/20', 'bg-error-container/10', 'bg-amber-500/10');
+          } else if (target === 'late') {
+            btn.className = 'btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-amber-500 text-white shadow-xs';
+            row.classList.add('bg-amber-500/10');
+            row.classList.remove('bg-surface-container-low/20', 'bg-error-container/10');
+          } else if (target === 'absent') {
+            btn.className = 'btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-error text-on-error shadow-xs';
+            row.classList.add('bg-error-container/10');
+            row.classList.remove('bg-surface-container-low/20', 'bg-amber-500/10');
+          }
+
+          updateCounts();
+        });
+      });
+    });
+
+    // Mark All Present Trigger
+    btnMarkAll.addEventListener('click', () => {
+      rosterRows.forEach(row => {
+        row.setAttribute('data-status', 'present');
+        row.classList.remove('bg-surface-container-low/20', 'bg-error-container/10', 'bg-amber-500/10');
+        const buttons = row.querySelectorAll('.btn-status');
+        buttons.forEach(b => {
+          if (b.getAttribute('data-target') === 'present') {
+            b.className = 'btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all bg-primary text-on-primary shadow-xs';
+          } else {
+            b.className = 'btn-status px-2.5 py-1 rounded text-caption font-semibold transition-all text-on-surface-variant hover:text-on-surface';
+          }
+        });
+      });
+      updateCounts();
+    });
+
+    // Save Feedback
+    btnSave.addEventListener('click', () => {
+      const origText = btnSave.innerHTML;
+      btnSave.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin">sync</span><span>Syncing...</span>';
+      setTimeout(() => {
+        btnSave.innerHTML = '<span class="material-symbols-outlined text-lg">check_circle</span><span>Confirmed &amp; Dispatched!</span>';
+        btnSave.classList.add('bg-primary-container');
+        setTimeout(() => {
+          btnSave.innerHTML = origText;
+          btnSave.classList.remove('bg-primary-container');
+        }, 2000);
+      }, 600);
+    });
+
+    // SMS Trigger
+    btnSms.addEventListener('click', () => {
+      alert('SMS Dispatch: 0 Unexcused Guardians queued. Status logs synced with Academy Messaging Portal.');
+    });
+
+    updateCounts();
+  })();
+</script></main></div></body></html>

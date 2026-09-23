@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#eaedff", "surface-container-low": "#f2f3ff", "secondary-fixed": "#dbe1ff", "error": "#ba1a1a", "surface-container-high": "#e2e7ff", "on-primary": "#ffffff", "error-container": "#ffdad6", "surface-tint": "#006c4a", "on-tertiary-fixed-variant": "#005236", "background": "#faf8ff", "on-background": "#131b2e", "on-secondary-fixed-variant": "#003ea8", "inverse-surface": "#283044", "surface-bright": "#faf8ff", "on-tertiary": "#ffffff", "tertiary-container": "#00855b", "on-surface-variant": "#3d4a42", "on-primary-fixed": "#002114", "primary-container": "#00855d", "primary-fixed": "#85f8c4", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#00174b", "primary": "#006948", "on-tertiary-container": "#f5fff6", "tertiary-fixed": "#6ffbbe", "outline": "#6d7a72", "inverse-primary": "#68dba9", "surface": "#faf8ff", "on-secondary-container": "#fefcff", "on-primary-container": "#f5fff7", "on-error-container": "#93000a", "on-tertiary-fixed": "#002113", "on-secondary": "#ffffff", "secondary": "#0051d5", "secondary-fixed-dim": "#b4c5ff", "outline-variant": "#bccac0", "tertiary": "#006947", "on-error": "#ffffff", "inverse-on-surface": "#eef0ff", "on-surface": "#131b2e", "tertiary-fixed-dim": "#4edea3", "surface-container-highest": "#dae2fd", "on-primary-fixed-variant": "#005137", "primary-fixed-dim": "#68dba9", "secondary-container": "#316bf3", "surface-variant": "#dae2fd", "surface-dim": "#d2d9f4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-2xl": "3rem", "margin-mobile": "1rem", "margin": "2rem", "gutter-sm": "1rem", "gutter-lg": "2rem", "space-xs": "0.25rem" }, "fontFamily": { "caption": [ "Inter" ], "body-lg": [ "Inter" ], "body-sm": [ "Inter" ], "display": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "stat-value": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "label-md": [ "Inter" ], "label-tabular": [ "Inter" ] }, "fontSize": { "caption": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "display": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "stat-value": [ "30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-tabular": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #059669 - Font: plusJakartaSans - Mode: light - Roundness: rounded-md" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WXC6pdqgNL5BSlI8ck8CUPCB51yyf6bOEQ3htC5fi8dB9XbRa_xDMEAfo_jSO_f5C-Sl5fS0uKgyAIG3eTsf5gbdao9j1VQFzGfpKpi9-zsnF4guVzuuXD6OHy2UwKsN3LwdqGW45iMyFnG_8P0kZ0NFi_-rkqxh-X55KlZoeADG9a9lSQVcxdU-2HBBjtPL7dqEtbCSq0MBfNLwnfwpxOAmIic90St5x9IUQPxkh-aURSuv07hOskGcc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface leading-none">APEX SPORTS</span><div class="flex items-center gap-space-xs mt-0.5"><span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md font-semibold leading-none uppercase">Member Hub</span></div></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-caption text-caption"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-medium">Olympic Park Arena</span><span class="text-outline">•</span><span>Open until 22:00</span></div></div><div class="flex items-center gap-space-md flex-1 max-w-xl mx-space-md hidden lg:flex"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search classes, drills, court slots, coaches..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-sm bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.04)]"><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wide">Tier 1 Elite</span></div><span class="font-caption text-caption text-outline">Multi-Sport • 24 Days Left</span></div><button class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md hover:bg-secondary-fixed-dim transition-colors" type="button">Renew</button></div><div class="relative flex items-center"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-caption text-[10px] font-bold">2</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-none">Julian Vance</span><span class="font-caption text-caption text-outline leading-tight mt-0.5">Elite High-Performance</span></div><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button></div></div></div></header><aside class="fixed left-0 top-20 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex flex-col gap-space-md px-space-sm"><div class="px-space-sm"><div class="font-caption text-caption font-semibold uppercase text-outline tracking-wider mb-space-xs">Operations &amp; Hub</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="home-and-memberships" href="#"><span class="material-symbols-outlined text-[20px]">stars</span><span class="font-label-lg text-label-lg">Home &amp; Memberships</span></a><a aria-current="page" class="flex items-center gap-space-sm px-3 py-2.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="class-booking" href="#"><span class="material-symbols-outlined text-[20px]">sports_tennis</span><span class="font-label-lg text-label-lg">Class Booking</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="personal-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">speed</span><span class="font-label-lg text-label-lg">Personal Dashboard</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="coach-feedback-and-plan" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-label-lg text-label-lg">Coach Feedback &amp; Plan</span></a></nav></div><div class="px-space-sm pt-space-xs"><div class="font-caption text-caption font-semibold uppercase text-outline tracking-wider mb-space-xs">Training Facilities</div><div class="flex flex-col gap-1.5 px-3 py-2.5 rounded-xl bg-surface-container-low"><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface font-semibold">Clay Courts 1-4</span><span class="font-caption text-caption text-primary font-bold">AVAILABLE</span></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface font-semibold">Olympic Pool</span><span class="font-caption text-caption text-secondary font-bold">LANES OPEN</span></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface font-semibold">Strength Lab</span><span class="font-caption text-caption text-outline font-bold">BUSY (84%)</span></div></div></div></div><div class="px-space-md"><div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between"><div class="flex flex-col"><span class="font-label-md text-label-md font-bold text-on-surface">Next: Speed &amp; Agility</span><span class="font-caption text-caption text-outline">Today • 16:30 • Track B</span></div><span class="material-symbols-outlined text-primary text-[20px]">timer</span></div></div></aside><div class="pl-64"><main class="relative pt-20 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<section class="w-full px-margin py-space-md flex flex-col gap-space-lg">
+<div class="w-full rounded-xl bg-surface-container-low p-space-md shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-xl">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">confirmation_number</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">3 / 4</span>
+<span class="font-caption text-caption uppercase tracking-wider text-outline font-semibold">Tier 1 Allotment</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Weekly Class Credits Used (1 remaining)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">sports_tennis</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">6 Passes</span>
+<span class="font-caption text-caption text-secondary font-bold uppercase">Flexible</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Open Court &amp; Ball Machine Access</span>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">qr_code_scanner</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Automated Turnstile QR</span>
+<span class="font-caption text-caption text-outline">Unlocks on app 15 min prior to court session</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full lg:w-auto justify-end">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+<span>Top-up Credits</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">event_available</span>
+<span>My Reservations (2)</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col max-w-2xl">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-caption text-caption font-bold tracking-wider uppercase">Olympic Arena Live Schedule</span>
+<span class="font-caption text-caption text-outline">• Fall 2024 Cycle</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Court &amp; Sports Class Booking Timetable</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Reserve academy group sessions, masterclinics, or open practice slots across all Olympic Park Arena zones.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm bg-surface-container-lowest p-1.5 rounded-xl shadow-sm">
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" type="button">Today</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" title="Previous Week" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-label-lg text-label-lg font-bold text-on-surface px-2 whitespace-nowrap">Nov 4 – Nov 10, 2024</span>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" title="Next Week" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<div class="h-5 w-px bg-outline-variant/30 mx-1 hidden sm:block"></div>
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label-md text-label-md font-bold shadow-sm" type="button">Week</button>
+<button class="px-3 py-1 text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-colors" type="button">Day</button>
+</div>
+</div>
+</div>
+<div class="w-full flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md pb-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-caption text-caption font-bold shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span>All Sports</span>
+<span class="w-4 h-4 rounded-full bg-white/20 text-on-primary flex items-center justify-center text-[10px]">18</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-caption text-caption font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px] text-primary">sports_tennis</span>
+<span>Tennis &amp; Padel</span>
+<span class="font-caption text-caption text-outline">10</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-caption text-caption font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">pool</span>
+<span>Aquatics &amp; Swimming</span>
+<span class="font-caption text-caption text-outline">4</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-caption text-caption font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">fitness_center</span>
+<span>Conditioning &amp; Gym</span>
+<span class="font-caption text-caption text-outline">4</span>
+</button>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">sports</span>
+<label class="sr-only" for="coachFilter">Coach</label>
+<select class="bg-transparent text-on-surface font-label-md text-label-md font-semibold focus:outline-none cursor-pointer" id="coachFilter">
+<option>All Coaches</option>
+<option>Coach Elena Rostova (Lead WTA/High-Perf)</option>
+<option>Coach Marcus Thorne (Biomechanics)</option>
+<option>Coach Carlos Mendez (Strength &amp; Conditioning)</option>
+</select>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">military_tech</span>
+<label class="sr-only" for="levelFilter">Skill Level</label>
+<select class="bg-transparent text-on-surface font-label-md text-label-md font-semibold focus:outline-none cursor-pointer" id="levelFilter">
+<option>All Levels</option>
+<option>Tier 1 Elite</option>
+<option>Junior Elite</option>
+<option>Adult Master</option>
+</select>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Available Sessions</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-caption text-caption font-bold">Week 45 Active</span>
+</div>
+<div class="flex items-center gap-3 font-caption text-caption text-on-surface-variant">
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span>Confirmed</span></div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span><span>Available</span></div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-outline"></span><span>Waitlist Only</span></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-xl bg-primary-fixed/30 flex flex-col items-center justify-center text-primary flex-shrink-0">
+<span class="font-caption text-caption font-bold uppercase">Wed</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">Nov 6</span>
+<span class="font-caption text-[10px] font-semibold text-outline">14:00</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-caption text-caption font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                      Booked by You
+                    </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-caption text-caption font-medium">Tier 1 Elite Only</span>
+<span class="font-caption text-caption text-outline">Duration: 90m</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">High-Performance Drills &amp; Match Play</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">person</span> Coach Elena Rostova</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">location_on</span> Court 1 (Red Clay Indoor)</span>
+<span class="flex items-center gap-1 text-primary font-semibold"><span class="material-symbols-outlined text-[16px]">schedule</span> Wed 14:00 - 15:30 (Today)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-space-xs flex-shrink-0 pt-space-xs md:pt-0">
+<div class="flex flex-col items-start md:items-end">
+<span class="font-caption text-caption text-primary font-bold">Starts in 45 minutes</span>
+<span class="font-body-sm text-body-sm text-outline">1 Court Credit Debited</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-highest transition-colors" onclick="document.getElementById('activeBookingPanel').scrollIntoView({behavior: 'smooth'})" type="button">Details</button>
+<button class="px-3 py-1.5 rounded-lg bg-error-container text-on-error-container font-label-md text-label-md font-bold hover:bg-error/20 transition-colors" onclick="confirmCancel('High-Performance Drills &amp; Match Play')" type="button">Cancel</button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-on-surface flex-shrink-0">
+<span class="font-caption text-caption font-bold uppercase text-outline">Wed</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">Nov 6</span>
+<span class="font-caption text-[10px] font-semibold text-outline">10:00</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-caption text-caption font-bold">Open for Registration</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-caption text-caption font-medium">Youth &amp; Junior Focus</span>
+<span class="font-caption text-caption text-outline">7 / 8 Spots Filled</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Youth Stroke Correction &amp; Biomechanics</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">person</span> Coach Marcus Thorne</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">location_on</span> Court 2 (Hard Decoturf)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">schedule</span> Wed 10:00 - 11:30</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-space-xs flex-shrink-0">
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-error">Only 1 spot remaining</span>
+</div>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Book Spot</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-on-surface flex-shrink-0">
+<span class="font-caption text-caption font-bold uppercase text-outline">Thu</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">Nov 7</span>
+<span class="font-caption text-[10px] font-semibold text-outline">08:30</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption font-bold">Full • Waitlist Active</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-caption text-caption font-medium">Junior Elite</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Junior Elite Tennis Clinic</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">person</span> Coach Marcus T.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">location_on</span> Court 1 (Clay Indoor)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">schedule</span> Thu 08:30 - 10:00</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-space-xs flex-shrink-0">
+<span class="font-caption text-caption text-outline">10/10 Players Registered</span>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-bold hover:bg-surface-container-highest transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">queue</span>
+<span>Join Waitlist (Position #2)</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-on-surface flex-shrink-0">
+<span class="font-caption text-caption font-bold uppercase text-outline">Thu</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">Nov 7</span>
+<span class="font-caption text-[10px] font-semibold text-outline">16:30</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-caption text-caption font-bold">4 / 8 Spots Left</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-caption text-caption font-medium">Adult Master</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Adult Competitive Masters Clinic</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">person</span> Coach Carlos Mendez</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">fitness_center</span> Gym Studio B (Functional)</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">schedule</span> Thu 16:30 - 18:00</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-space-xs flex-shrink-0">
+<span class="font-caption text-caption text-primary font-bold">1 Credit or Pass</span>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Book Spot</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-xl bg-primary-fixed/30 flex flex-col items-center justify-center text-primary flex-shrink-0">
+<span class="font-caption text-caption font-bold uppercase">Fri</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">Nov 8</span>
+<span class="font-caption text-[10px] font-semibold text-outline">10:00</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-caption text-caption font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                      Booked by You
+                    </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-caption text-caption font-medium">Practice Session</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Open Practice / Ball Machine Lab</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">smart_toy</span> Self-Guided • Spinfire Pro II</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">location_on</span> Court 2 Hard Decoturf</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">schedule</span> Fri 10:00 - 11:30</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-space-xs flex-shrink-0">
+<span class="font-caption text-caption text-outline">Flexible Court Pass Used</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-error-container hover:text-on-error-container transition-colors" onclick="confirmCancel('Open Practice / Ball Machine Lab')" type="button">Cancel Reservation</button>
+</div>
+</div>
+</div>
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-16 h-16 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-on-surface flex-shrink-0">
+<span class="font-caption text-caption font-bold uppercase text-outline">Sat</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">Nov 9</span>
+<span class="font-caption text-[10px] font-semibold text-outline">07:00</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-caption text-caption font-bold">12 / 20 Spots</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-caption text-caption font-medium">Endurance &amp; VO2</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Olympic Masters Swim &amp; Endurance</h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">pool</span> Coach Elena Rostova</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">location_on</span> Aquatics Pavilion Lane 1-4</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">schedule</span> Sat 07:00 - 08:30</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-space-xs flex-shrink-0">
+<span class="font-caption text-caption text-primary font-bold">50m Heated Basin</span>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Book Spot</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col gap-space-md" id="activeBookingPanel">
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Manage Reservation</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-caption text-caption font-bold uppercase">Active Today</span>
+</div>
+<div class="relative w-full h-40 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A pristine indoor red clay tennis court with white baseline markings, high arched ceiling industrial spotlights, and an athletic player in mid-motion serving during high performance practice session in an Olympic sports training facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjeGYgfwa00sw92KO5DtvB1UxRCwHSFje5tMX8S1MOHOG7jcJRhHKCOvnXHHuD8tDjwuQv7vz7HPsqNngJWFkMaxRZEwLIdJ58jqenCQVO9sH6B-NgvpOCltZ3NyvYUc4fZk--Zzhn3PK2VvXEwFqBd5YYC8zATDzGXi6ZfEreKkCMVy9gOPHuLF5xbs8KZQffhNy0jnMseAWYrp_FAcfRg5hN0yZs8KXFa7iSamrqLtTd7N4gmI6Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-space-sm text-white">
+<span class="font-caption text-caption uppercase tracking-wider text-primary-fixed font-bold">Court 1 • Clay Specialization</span>
+<span class="font-headline-sm text-headline-sm font-bold text-white leading-tight">High-Performance Drills &amp; Match Play</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption font-semibold uppercase text-outline">Date &amp; Time</span>
+<span class="font-label-md text-label-md font-bold text-on-surface text-right">Today • 14:00 - 15:30</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption font-semibold uppercase text-outline">Facility Zone</span>
+<span class="font-label-md text-label-md font-bold text-on-surface text-right">Olympic Indoor Clay (Court 1)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption font-semibold uppercase text-outline">Lead Coach</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-primary">Coach Elena Rostova</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption font-semibold uppercase text-outline">Equipment Status</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface text-right">Babolat Balls Included</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption font-semibold uppercase text-outline">Locker &amp; Towels</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface text-right">Locker #42 Assigned</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Cancellation Policy Notice</span>
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">Free cancellation up to 2 hours before start time. 1 credit will be automatically refunded to your Tier 1 Elite balance.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg font-bold hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_add_on</span>
+<span>Add to Calendar (.ics / Google)</span>
+</button>
+<button class="w-full py-2.5 rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg font-bold hover:bg-error/20 transition-colors flex items-center justify-center gap-2" onclick="confirmCancel('High-Performance Drills &amp; Match Play')" type="button">
+<span class="material-symbols-outlined text-[18px]">event_busy</span>
+<span>Cancel Reservation</span>
+</button>
+</div>
+</div>
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Arena Utilization</h4>
+<span class="font-caption text-caption text-primary font-bold">LIVE TELEMETRY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time court humidity &amp; surface readiness readings at Olympic Park Arena.</p>
+<div class="grid grid-cols-2 gap-space-sm mt-1">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-caption text-caption uppercase text-outline font-semibold">Clay Moisture</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Optimal (42%)</span>
+<span class="font-caption text-caption text-primary font-medium mt-0.5">Rolled at 12:30</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-caption text-caption uppercase text-outline font-semibold">Decoturf Hard</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Speed Index 4</span>
+<span class="font-caption text-caption text-secondary font-medium mt-0.5">Fast pace rating</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-caption text-caption text-outline">
+<span>Staff On-duty: Dr. Thorne / Rostova</span>
+<span class="text-primary font-semibold">Medical Bay: Open</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-margin-mobile" id="cancelModal">
+<div class="w-full max-w-md rounded-2xl bg-surface-container-lowest p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Cancel Session Booking?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Are you sure you want to cancel your spot for <strong class="text-on-surface" id="modalSessionName">High-Performance Drills</strong>? This slot will immediately be released to waitlisted athletes.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">swap_horizontal_circle</span>
+<span class="font-caption text-caption text-on-surface font-semibold">1 Tier 1 Elite credit will return to your account balance.</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-highest transition-colors" onclick="closeCancelModal()" type="button">Keep Booking</button>
+<button class="px-4 py-2 rounded-lg bg-error text-on-error font-label-lg text-label-lg font-bold hover:bg-error/90 transition-all shadow-sm" onclick="executeCancel()" type="button">Confirm Cancellation</button>
+</div>
+</div>
+</div>
+<script>
+    function confirmCancel(sessionName) {
+      const modal = document.getElementById('cancelModal');
+      const label = document.getElementById('modalSessionName');
+      if (label) label.textContent = sessionName;
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeCancelModal() {
+      const modal = document.getElementById('cancelModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function executeCancel() {
+      closeCancelModal();
+      alert('Your booking reservation has been successfully cancelled and 1 session credit was refunded.');
+    }
+  </script>
+</div></main></div><div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-space-xs"><div class="w-80 md:w-96 rounded-xl bg-surface-container-lowest shadow-[0_8px_20px_-4px_rgba(15,23,42,0.12)] p-space-md flex flex-col gap-space-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Apex AI Athletic Assistant</span></div><span class="material-symbols-outlined text-outline text-[18px] cursor-pointer hover:text-on-surface">expand_more</span></div><p class="font-caption text-caption text-on-surface-variant">Ready to analyze biometrics, book courts, or summarize Elena's technical notes.</p><div class="flex flex-wrap gap-1.5"><button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-caption text-caption hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">What's my next session?</button><button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-caption text-caption hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">Book Court 1 Clay</button><button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-caption text-caption hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">Explain Coach Elena's drill comments</button></div><div class="relative flex items-center"><input class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Ask Apex AI tactical question..." type="text"/><button class="absolute right-2 text-primary hover:text-primary-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">arrow_upward</span></button></div></div></div></body></html>

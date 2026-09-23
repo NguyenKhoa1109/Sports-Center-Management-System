@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_dashboard" name="shell-type"/>
+<title>Apex Sports - Player Evaluations &amp; Athlete Dossier</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#006948",
+            "primary-container": "#00855d",
+            "primary-fixed": "#85f8c4",
+            "primary-fixed-dim": "#68dba9",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#f5fff7",
+            "on-primary-fixed": "#002114",
+            "on-primary-fixed-variant": "#005137",
+            "secondary": "#0051d5",
+            "secondary-container": "#316bf3",
+            "secondary-fixed": "#dbe1ff",
+            "secondary-fixed-dim": "#b4c5ff",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#fefcff",
+            "on-secondary-fixed": "#00174b",
+            "on-secondary-fixed-variant": "#003ea8",
+            "tertiary": "#006947",
+            "tertiary-container": "#00855b",
+            "tertiary-fixed": "#6ffbbe",
+            "tertiary-fixed-dim": "#4edea3",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#f5fff6",
+            "on-tertiary-fixed": "#002113",
+            "on-tertiary-fixed-variant": "#005236",
+            "surface": "#faf8ff",
+            "surface-dim": "#d2d9f4",
+            "surface-bright": "#faf8ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f2f3ff",
+            "surface-container": "#eaedff",
+            "surface-container-high": "#e2e7ff",
+            "surface-container-highest": "#dae2fd",
+            "surface-variant": "#dae2fd",
+            "on-surface": "#131b2e",
+            "on-surface-variant": "#3d4a42",
+            "background": "#faf8ff",
+            "on-background": "#131b2e",
+            "outline": "#6d7a72",
+            "outline-variant": "#bccac0",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#283044",
+            "inverse-on-surface": "#eef0ff",
+            "inverse-primary": "#68dba9"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "stat-value": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-lg": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "label-tabular": ["Inter", "sans-serif"],
+            "caption": ["Inter", "sans-serif"]
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-2xl": "3rem"
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f2f3ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #bccac0;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6d7a72;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased overflow-x-hidden min-h-screen">
+<!-- Left Sidebar (Apex Sports Coach Portal) -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between">
+<div class="flex flex-col flex-1">
+<!-- Brand Logo -->
+<div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest border-b border-surface-container">
+<img alt="Apex Sports Logo" class="h-9 w-9 rounded-lg object-contain shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1UbJLoF8Gpk-FZsdDk1kJhI8520_H9poPU7hDz1eYzGJqCllcz5g589ULWyZXzL2n7bsowvmGGvSdFhGqNZa-QErtvsi_XgflWrMnUetIzghn2K6weLtm34_33-lfTkXQfDtKF0V_h6pBl63vQQEweAPOmXF8dmtAlRn8D9BqnGw2lno5X6sajUI_3V3uESw37dqpWQ7eIBmzFg8X5UqMr1TOf8wv3Lc9X8c06MzKaHn1Qto_QTMKhoriA"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-base text-on-surface leading-tight font-extrabold tracking-tight">Apex Sports</span>
+<span class="font-caption text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold">Coach Portal</span>
+</div>
+</div>
+<!-- Division Picker -->
+<div class="px-space-md py-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">sports_tennis</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-none">High Performance</span>
+<span class="font-caption text-[11px] text-on-surface-variant font-medium mt-0.5">Tennis &amp; Athletic Dev</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">unfold_more</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 px-space-sm space-y-1 mt-space-xs">
+<a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+<span>Schedule &amp; Classes</span>
+</a>
+<a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined text-xl">how_to_reg</span>
+<span>Rosters &amp; Attendance</span>
+</a>
+<a aria-current="page" class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-headline-sm text-sm font-semibold shadow-sm transition-all" href="#">
+<span class="material-symbols-outlined text-xl">assessment</span>
+<span>Player Evaluations</span>
+</a>
+<a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined text-xl">psychology</span>
+<span>Training Plans &amp; AI</span>
+</a>
+<a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined text-xl">chat</span>
+<span>Student Messaging</span>
+</a>
+<a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined text-xl">insights</span>
+<span>Performance Analytics</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Widget & Emergency Alert -->
+<div class="p-space-md bg-surface-container-low space-y-space-md border-t border-surface-container">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Teaching Target</span>
+<span class="font-label-tabular text-sm text-primary font-bold">4.5 / 6.0 hrs</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 75%"></div>
+</div>
+<div class="flex justify-between items-center mt-space-xs font-caption text-[11px] text-on-surface-variant">
+<span>1.5 hrs remaining</span>
+<span class="font-semibold text-primary">75%</span>
+</div>
+</div>
+<a class="flex items-center justify-center gap-space-sm w-full py-2.5 px-space-md rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg font-bold hover:bg-error hover:text-on-error transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">emergency</span>
+<span>Emergency Desk</span>
+</a>
+</div>
+</aside>
+<!-- Main View Area (with Header and Modal Overlay) -->
+<div class="pl-72 min-h-screen flex flex-col bg-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 px-space-xl flex items-center justify-between border-b border-surface-container">
+<!-- Left: Coach Workspace Selector & Status -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high border border-surface-variant cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-primary text-lg">co_present</span>
+<span class="font-label-lg text-sm text-on-surface font-semibold">Coach Workspace - Elena Rostova, Senior Coach</span>
+<span class="material-symbols-outlined text-on-surface-variant text-base">arrow_drop_down</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full font-caption text-[11px] font-bold bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>On Duty
+          </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full font-caption text-[11px] font-bold bg-secondary-fixed text-on-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Court 1 &amp; Gym A
+          </span>
+</div>
+</div>
+<!-- Right: Search, Notifications, Profile -->
+<div class="flex items-center gap-space-md">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-lg pointer-events-none">search</span>
+<input class="h-9 pl-9 pr-space-md bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-secondary w-64 transition-all" placeholder="Search athletes, rosters, drills..." type="text"/>
+</div>
+<button aria-label="Notifications" class="relative p-2 rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span>
+</button>
+<div class="flex items-center gap-space-sm pl-space-xs border-l border-surface-container">
+<img alt="Elena Rostova Headshot" class="w-9 h-9 rounded-full object-cover ring-2 ring-primary shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XOMDXXNl4_M6i-7bO6MnIFc8bUipJejvHjjkV401FGwAO6tUyHZuaHje-rrKWwWjkkdpLaH4LNutsJHcceFjnaliFVuF38kTD4NiDVl0X1URt2C8i3W8xbLGDs03SgqX0aLctF1ZVDKw7ZIVurfxSLMT6XclHedS5lJeH3XRCI2_ffl_xAi0Rwy6X6LK7dCJTw8fxY5u-yDCb0QD9j8-bEZJmTpSTcUnMIqkOgl3EUGOurRVYD2NwDEv4"/>
+<div class="hidden xl:flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface leading-tight">Coach Rostova</span>
+<span class="font-caption text-[10px] text-on-surface-variant font-medium">Head Performance Coach</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Container with Underlying Roster View -->
+<main class="relative pt-16 flex-1 px-space-xl py-space-lg overflow-hidden">
+<!-- Underlying Coach Dashboard Canvas (Subtly Blurred/Dimmed) -->
+<div class="w-full opacity-40 filter blur-[2px] select-none pointer-events-none transition-all duration-300">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex flex-col">
+<h1 class="font-headline-md text-2xl font-bold text-on-surface">Athlete Academy Roster &amp; Evaluations</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Active Squad: Elite U-18 High Performance Cohort (14 Athletes Registered)</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="h-10 px-space-md rounded-lg bg-surface-container-high flex items-center gap-space-sm text-on-surface font-label-md font-semibold">
+<span class="material-symbols-outlined text-base">filter_list</span>
+<span>Tier 1 Elite (9)</span>
+</div>
+<div class="h-10 px-space-md rounded-lg bg-primary text-on-primary flex items-center gap-space-sm font-label-md font-semibold">
+<span class="material-symbols-outlined text-base">add</span>
+<span>New Assessment</span>
+</div>
+</div>
+</div>
+<!-- Roster Table Background Placeholder -->
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container overflow-hidden">
+<div class="grid grid-cols-12 px-space-lg py-space-sm bg-surface-container-low text-on-surface-variant font-caption text-xs font-bold uppercase tracking-wider">
+<span class="col-span-4">Athlete &amp; Bio</span>
+<span class="col-span-2">Discipline</span>
+<span class="col-span-2 text-right">Weekly Load</span>
+<span class="col-span-2 text-center">Readiness</span>
+<span class="col-span-2 text-right">Action</span>
+</div>
+<div class="grid grid-cols-12 px-space-lg py-space-md items-center bg-surface-container-lowest border-t border-surface-container">
+<div class="col-span-4 flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant"></div>
+<div>
+<div class="font-label-lg font-bold text-on-surface">Julian Vance</div>
+<div class="font-caption text-on-surface-variant">#MB-9921 • Age 16</div>
+</div>
+</div>
+<span class="col-span-2 font-body-sm text-on-surface">Tennis / Swim</span>
+<span class="col-span-2 text-right font-label-tabular text-on-surface">14.0 hrs</span>
+<span class="col-span-2 text-center">
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-caption text-xs font-bold">92% Optimal</span>
+</span>
+<span class="col-span-2 text-right font-label-md font-semibold text-primary">In Session...</span>
+</div>
+<div class="grid grid-cols-12 px-space-lg py-space-md items-center bg-surface-container-low border-t border-surface-container">
+<div class="col-span-4 flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant"></div>
+<div>
+<div class="font-label-lg font-bold text-on-surface">Maya Lin-Sorensen</div>
+<div class="font-caption text-on-surface-variant">#MB-9924 • Age 17</div>
+</div>
+</div>
+<span class="col-span-2 font-body-sm text-on-surface">Sprint Track &amp; Tennis</span>
+<span class="col-span-2 text-right font-label-tabular text-on-surface">12.5 hrs</span>
+<span class="col-span-2 text-center">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-caption text-xs font-bold">89% Recovery</span>
+</span>
+<span class="col-span-2 text-right font-label-md font-semibold text-on-surface-variant">View Profile</span>
+</div>
+</div>
+</div>
+<!-- Focused Modal Overlay: Fully Proportioned and Never Cut Off -->
+<div class="fixed inset-0 top-16 left-72 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-4 md:p-6 overflow-y-auto">
+<!-- Modal Card Container -->
+<div class="relative w-full max-w-5xl my-auto rounded-2xl bg-surface-container-lowest shadow-2xl border border-surface-container flex flex-col max-h-[calc(100vh-5.5rem)] overflow-hidden transition-all duration-200">
+<!-- 1. Modal Top Bar: Header & Controls -->
+<div class="px-space-lg py-3 bg-surface-container-low border-b border-surface-container flex items-center justify-between shrink-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-caption text-xs font-bold bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                Tier 1 Elite Division
+              </span>
+<span class="font-caption text-xs text-on-surface-variant font-semibold">Session Evaluation Workspace</span>
+<span class="text-outline-variant font-caption">•</span>
+<span class="font-label-tabular text-xs text-on-surface-variant font-medium">Recorded by Coach Elena Rostova</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" title="Print Dossier" type="button">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" title="Maximize View" type="button">
+<span class="material-symbols-outlined text-lg">open_in_full</span>
+</button>
+<a class="p-1.5 rounded-lg text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-colors" href="#" title="Close">
+<span class="material-symbols-outlined text-lg">close</span>
+</a>
+</div>
+</div>
+<!-- 2. Scrollable Body Content -->
+<div class="flex-1 overflow-y-auto p-space-lg space-y-space-md">
+<!-- Athlete Overview Header Card -->
+<div class="rounded-xl bg-surface-container-low p-space-lg border border-surface-container relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg relative z-10">
+<!-- Athlete Profile Details -->
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="relative shrink-0">
+<img alt="Julian Vance" class="w-20 h-20 rounded-xl object-cover ring-2 ring-primary shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8a94sB75cUE3yIXekhOOjH16VbviKNPFjfB_scXv7Ui1ymML8mBHPmi9-hOY7nbmx0UbGPqLBJhfqNbh2rgJWnxxfDcTWBDEVhXayefqdGTrxYV5JJWOC6bT6qOXeuXivKZNNefXn2qKbu5tJpj8w-6enSflo3dtbyDLhe_6xnOq6LkQ4UH4gqm6eWco5MwKMIaQGpoZ1xeuiG8WINHBq_fT8i2v8rSWYhmjNequQB10tUKy7jtfq"/>
+<span class="absolute -bottom-1.5 -right-1.5 px-1.5 py-0.2 bg-primary text-on-primary rounded-full font-caption text-[10px] font-extrabold shadow-sm">#1 Seed</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-2xl font-bold text-on-surface tracking-tight">Julian Vance</span>
+<span class="font-label-tabular text-xs font-bold text-secondary-container bg-surface-variant px-2 py-0.5 rounded">ID #MB-9921</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-caption text-[11px] font-bold bg-primary text-on-primary uppercase tracking-wider">Elite Multi-Sport</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm flex-wrap text-xs md:text-sm">
+<span>Age: <strong class="text-on-surface font-semibold">16 yrs</strong> (DOB: Aug 2008)</span>
+<span class="text-outline-variant">•</span>
+<span>Discipline: <strong class="text-on-surface font-semibold">Elite High-Performance Tennis &amp; Multi-Sport</strong></span>
+<span class="text-outline-variant">•</span>
+<span>Primary Goal: <strong class="text-primary font-semibold">Grand Slam Pathway &amp; U-16 National Championship</strong></span>
+</div>
+</div>
+</div>
+<!-- Readiness Circular Gauge -->
+<div class="flex items-center gap-space-md bg-surface-container-lowest px-4 py-2.5 rounded-xl border border-surface-container shadow-sm self-stretch lg:self-auto justify-between lg:justify-start">
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-on-surface-variant uppercase tracking-wider font-bold">Physical Readiness</span>
+<span class="font-stat-value text-2xl text-primary font-extrabold flex items-baseline gap-0.5">
+                      92% <span class="text-xs font-semibold text-tertiary">Peak Zone</span>
+</span>
+</div>
+<div class="w-12 h-12 flex items-center justify-center shrink-0">
+<svg class="w-12 h-12 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm mt-space-md pt-space-md border-t border-surface-container">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-surface-container flex items-center gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-base">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-on-surface-variant font-medium">UTR Rating</span>
+<span class="font-label-tabular text-sm font-bold text-on-surface">10.1 <span class="font-caption text-[10px] text-primary font-semibold">State Seed #2</span></span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-surface-container flex items-center gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-base">fact_check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-on-surface-variant font-medium">Attendance</span>
+<span class="font-label-tabular text-sm font-bold text-on-surface">96.2% <span class="font-caption text-[10px] text-on-surface-variant">(48 / 50 sessions)</span></span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-surface-container flex items-center gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-base">ecg_heart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-on-surface-variant font-medium">Resting HRV</span>
+<span class="font-label-tabular text-sm font-bold text-on-surface">78 ms <span class="font-caption text-[10px] text-tertiary font-semibold">Optimal</span></span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-surface-container flex items-center gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-base">sports_score</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-on-surface-variant font-medium">Match Win Ratio</span>
+<span class="font-label-tabular text-sm font-bold text-on-surface">84.6% <span class="font-caption text-[10px] text-primary font-semibold">22W - 4L</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Sub-Navigation Tabs -->
+<div class="flex border-b border-surface-container gap-space-md text-body-sm font-semibold">
+<button class="pb-2.5 border-b-2 border-primary text-primary flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-lg">edit_document</span>
+<span>Current Session Evaluation</span>
+</button>
+<button class="pb-2.5 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">radar</span>
+<span>Historical Scores &amp; Radar</span>
+</button>
+<button class="pb-2.5 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">videocam</span>
+<span>Biometrics &amp; Video Telemetry</span>
+</button>
+<button class="pb-2.5 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">flag</span>
+<span>Long-term Development Goals</span>
+</button>
+</div>
+<!-- Main Assessment Core Grid (2 Columns) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Column: Core Competencies Scoring /10 -->
+<div class="lg:col-span-7 space-y-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-surface-container space-y-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">tune</span>
+<span class="font-headline-sm text-base font-bold text-on-surface">Core Competencies Scoring</span>
+</div>
+<span class="font-caption text-[11px] bg-primary/10 text-primary px-2 py-0.5 rounded font-bold">Standard Scale / 10.0</span>
+</div>
+<!-- Competency 1: Technical Execution -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-sm font-bold text-on-surface flex items-center gap-1.5">
+                        Technical Execution
+                        <span class="font-caption text-xs text-on-surface-variant font-normal">(Forehand depth, kick serve angle, volley placement)</span>
+</label>
+<div class="flex items-center gap-1">
+<span class="font-label-tabular text-base font-extrabold text-primary" id="techVal">9.2</span>
+<span class="font-caption text-xs text-on-surface-variant">/ 10</span>
+</div>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none" max="10" min="1" oninput="document.getElementById('techVal').innerText = parseFloat(this.value).toFixed(1)" step="0.1" type="range" value="9.2"/>
+<div class="flex justify-between font-caption text-[11px] text-on-surface-variant">
+<span>Baseline (5.0)</span>
+<span>Advanced (7.5)</span>
+<span class="text-primary font-bold">Mastery (9.2 / 10)</span>
+</div>
+</div>
+<!-- Competency 2: Tactical Decision-Making -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-sm font-bold text-on-surface flex items-center gap-1.5">
+                        Tactical Decision-Making
+                        <span class="font-caption text-xs text-on-surface-variant font-normal">(Point construction, transition pacing)</span>
+</label>
+<div class="flex items-center gap-1">
+<span class="font-label-tabular text-base font-extrabold text-primary" id="tactVal">9.0</span>
+<span class="font-caption text-xs text-on-surface-variant">/ 10</span>
+</div>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none" max="10" min="1" oninput="document.getElementById('tactVal').innerText = parseFloat(this.value).toFixed(1)" step="0.1" type="range" value="9.0"/>
+<div class="flex justify-between font-caption text-[11px] text-on-surface-variant">
+<span>Reactive (5.0)</span>
+<span>Adaptive (8.0)</span>
+<span class="text-primary font-bold">Anticipatory (9.0 / 10)</span>
+</div>
+</div>
+<!-- Competency 3: Physical Conditioning & Agility -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-sm font-bold text-on-surface flex items-center gap-1.5">
+                        Physical Conditioning &amp; Agility
+                        <span class="font-caption text-xs text-on-surface-variant font-normal">(Split-step latency 0.15s, anaerobic recovery)</span>
+</label>
+<div class="flex items-center gap-1">
+<span class="font-label-tabular text-base font-extrabold text-primary" id="physVal">9.5</span>
+<span class="font-caption text-xs text-on-surface-variant">/ 10</span>
+</div>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none" max="10" min="1" oninput="document.getElementById('physVal').innerText = parseFloat(this.value).toFixed(1)" step="0.1" type="range" value="9.5"/>
+<div class="flex justify-between font-caption text-[11px] text-on-surface-variant">
+<span>Standard (6.0)</span>
+<span>Conditioned (8.0)</span>
+<span class="text-primary font-bold">Peak Elite (9.5 / 10)</span>
+</div>
+</div>
+<!-- Competency 4: Mental Resilience & Focus -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-sm font-bold text-on-surface flex items-center gap-1.5">
+                        Mental Resilience &amp; Focus
+                        <span class="font-caption text-xs text-on-surface-variant font-normal">(Pressure handling, tiebreak poise)</span>
+</label>
+<div class="flex items-center gap-1">
+<span class="font-label-tabular text-base font-extrabold text-primary" id="mentVal">8.8</span>
+<span class="font-caption text-xs text-on-surface-variant">/ 10</span>
+</div>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none" max="10" min="1" oninput="document.getElementById('mentVal').innerText = parseFloat(this.value).toFixed(1)" step="0.1" type="range" value="8.8"/>
+<div class="flex justify-between font-caption text-[11px] text-on-surface-variant">
+<span>Variable (5.0)</span>
+<span>Solid (7.5)</span>
+<span class="text-primary font-bold">Disciplined (8.8 / 10)</span>
+</div>
+</div>
+</div>
+<!-- Measurable Session Benchmarks Tile -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="font-headline-sm text-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">speed</span>
+                      Measurable Session Benchmarks
+                    </span>
+<span class="font-caption text-[11px] text-secondary font-bold bg-secondary-fixed px-2 py-0.5 rounded">Smart Court Radar Sync</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-1">
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-caption text-[11px] text-on-surface-variant block font-medium">1st Serve Speed</span>
+<span class="font-label-tabular text-base font-extrabold text-on-surface">118 <span class="font-caption text-[10px] text-on-surface-variant">mph</span></span>
+<span class="font-caption text-[10px] text-tertiary block font-semibold">Avg: 112 mph</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-caption text-[11px] text-on-surface-variant block font-medium">Spin Rate</span>
+<span class="font-label-tabular text-base font-extrabold text-on-surface">2,850 <span class="font-caption text-[10px] text-on-surface-variant">RPM</span></span>
+<span class="font-caption text-[10px] text-primary block font-semibold">+120 vs baseline</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-caption text-[11px] text-on-surface-variant block font-medium">Unforced Errors</span>
+<span class="font-label-tabular text-base font-extrabold text-on-surface">12%</span>
+<span class="font-caption text-[10px] text-tertiary block font-semibold">Target &lt;15%</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-caption text-[11px] text-on-surface-variant block font-medium">Net Clearance</span>
+<span class="font-label-tabular text-base font-extrabold text-on-surface">94%</span>
+<span class="font-caption text-[10px] text-primary block font-semibold">Highly Consistent</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Coach Observation, Tags, Homework & Milestone -->
+<div class="lg:col-span-5 space-y-space-md">
+<!-- Coach Observations & Tags -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="font-headline-sm text-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">rate_review</span>
+                      Coach Observation &amp; Qualitative Debrief
+                    </span>
+<span class="font-caption text-[11px] text-on-surface-variant font-medium">Visible to Athlete &amp; Parents</span>
+</div>
+<!-- Tactical Quick-Tags -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-caption text-xs font-semibold cursor-pointer shadow-xs hover:opacity-90 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check</span> Kick Serve Consistency
+                    </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-caption text-xs font-semibold cursor-pointer shadow-xs hover:opacity-90 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check</span> Transition Depth
+                    </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-caption text-xs font-medium cursor-pointer hover:bg-surface-variant">
+                      + Footwork Split-Step
+                    </span>
+</div>
+<!-- Observation Notes Textarea -->
+<div class="relative mt-2">
+<textarea class="w-full p-3 bg-surface-container rounded-lg font-body-sm text-xs leading-relaxed text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-secondary border-0 resize-none" rows="4">Julian exhibited exceptional lateral recovery on the backhand corner today. Kick serve bounce cleared target threshold consistently. Recommend deepening cross-court approach before advancing to net.</textarea>
+</div>
+</div>
+<!-- Next Steps & Assigned Drills -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-surface-container shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="font-headline-sm text-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">assignment</span>
+                      Next Steps &amp; Assigned Homework
+                    </span>
+<span class="font-caption text-[11px] text-primary font-bold">2 Drills Prescribed</span>
+</div>
+<!-- Drill Item 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">directions_run</span>
+<div class="flex flex-col">
+<span class="font-label-md text-xs font-bold text-on-surface">Figure-8 Kinetic Footwork Ladder</span>
+<span class="font-caption text-[10px] text-on-surface-variant">15 min post-warmup • Focus on deceleration</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+</div>
+<!-- Drill Item 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">fitness_center</span>
+<div class="flex flex-col">
+<span class="font-label-md text-xs font-bold text-on-surface">Rotator Cuff Prehab Protocol</span>
+<span class="font-caption text-[10px] text-on-surface-variant">10 min • Green resistance band</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+</div>
+<!-- Next Milestone Callout -->
+<div class="p-2.5 rounded-lg bg-primary/5 border border-primary/20 flex items-center gap-2.5 mt-2">
+<span class="material-symbols-outlined text-primary text-lg shrink-0">event_available</span>
+<div class="flex flex-col">
+<span class="font-caption text-[10px] text-primary font-bold uppercase tracking-wider">Next Target Milestone</span>
+<span class="font-label-md text-xs font-bold text-on-surface">Tournament Match Simulation on Nov 8 (Court 1)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sync Notification Notification Pill -->
+<div class="px-space-md py-2.5 rounded-xl bg-surface-container-low border border-surface-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs text-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-lg">phonelink_ring</span>
+<span class="text-on-surface font-medium">Sync Target: <strong class="text-on-surface font-bold">Julian Vance (Athlete Mobile App)</strong> &amp; <strong class="text-on-surface font-bold">Marcus Vance (Guardian Portal)</strong></span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-[11px]">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Auto-draft saved 2 mins ago</span>
+</div>
+</div>
+</div>
+<!-- 3. Modal Sticky Action Footer -->
+<div class="px-space-lg py-3 bg-surface-container-lowest border-t border-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm shrink-0">
+<!-- Guardian / Sponsor Option Checkbox -->
+<label class="flex items-center gap-2 cursor-pointer select-none text-xs text-on-surface font-medium">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+<span>Notify Guardian / Sponsor via SMS &amp; Mobile Push</span>
+</label>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-2 rounded-lg text-on-surface font-label-lg text-xs font-bold hover:bg-surface-container transition-colors" type="button">
+                Save as Draft
+              </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-xs font-bold hover:bg-primary-container transition-all flex items-center justify-center gap-1.5 shadow-md" type="button">
+<span class="material-symbols-outlined text-base">verified</span>
+<span>Publish &amp; Sync with Athlete Mobile App</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

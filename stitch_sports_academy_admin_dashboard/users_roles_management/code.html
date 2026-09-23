@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error":"#ffffff","on-tertiary-fixed":"#002113","on-surface-variant":"#3d4a42","on-primary":"#ffffff","on-secondary-fixed-variant":"#003ea8","background":"#faf8ff","surface-container-high":"#e2e7ff","tertiary":"#006947","primary":"#006948","secondary-fixed-dim":"#b4c5ff","surface-container-highest":"#dae2fd","on-tertiary-container":"#f5fff6","primary-container":"#00855d","tertiary-container":"#00855b","on-secondary":"#ffffff","tertiary-fixed":"#6ffbbe","inverse-surface":"#283044","secondary-container":"#316bf3","on-primary-fixed-variant":"#005137","tertiary-fixed-dim":"#4edea3","inverse-primary":"#68dba9","surface-tint":"#006c4a","surface-variant":"#dae2fd","on-tertiary-fixed-variant":"#005236","on-primary-container":"#f5fff7","surface-container-lowest":"#ffffff","on-surface":"#131b2e","on-tertiary":"#ffffff","on-primary-fixed":"#002114","primary-fixed-dim":"#68dba9","secondary-fixed":"#dbe1ff","secondary":"#0051d5","surface":"#faf8ff","on-error-container":"#93000a","primary-fixed":"#85f8c4","surface-container-low":"#f2f3ff","on-secondary-container":"#fefcff","outline-variant":"#bccac0","error-container":"#ffdad6","inverse-on-surface":"#eef0ff","on-secondary-fixed":"#00174b","outline":"#6d7a72","error":"#ba1a1a","surface-dim":"#d2d9f4","surface-container":"#eaedff","on-background":"#131b2e","surface-bright":"#faf8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","gutter-lg":"2rem","space-lg":"1.5rem","space-xl":"2rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-mobile":"1rem","space-md":"1rem","margin":"2rem","space-2xl":"3rem","space-xs":"0.25rem"},"fontFamily":{"stat-value":["Plus Jakarta Sans"],"label-tabular":["Inter"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"caption":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-lg":["Inter"],"display":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"]},"fontSize":{"stat-value":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-tabular":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"caption":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"display":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ApexSports Academy Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vcyens9Jg8yCEqpSwp0HCxklIUD-Rp8OYrdlGjTEU74F46_40-dzZS8jZjODSITNo7Lz-kyb2secmRcDfn_0nW8QhyW27WeDPoSOmZ40WwH9MlylnHVvVfjToLhJj5y9NLozlNB8IpsbD2M4Qpvy3afviXZzzU1PV-9lSpu3AxWvoPFvha9X0rfik1Za8oDVg_aqyM99f161JYii4_Su4Gy86MIywD3EJ5Ekk6zMq3BM-mVJhjqT6Nqg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Apex Sports OS</span><span class="font-caption text-caption text-on-surface-variant">Athletics Enterprise</span></div></div><span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary font-caption text-caption uppercase tracking-wider font-semibold">Central Hub</span></div><div class="px-space-md mb-space-md"><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors"><div class="flex items-center gap-space-sm overflow-hidden"><span class="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0 animate-pulse"></span><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Olympic Park Arena</span><span class="font-caption text-caption text-on-surface-variant truncate">Main Campus · Primary</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-base">unfold_more</span></div></div><nav class="flex-1 px-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-reports" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-label-lg text-label-lg">Dashboard &amp; Reports</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Directory</div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="users-roles" href="#"><span class="material-symbols-outlined text-xl">group</span><span class="font-label-lg text-label-lg">Users &amp; Roles</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Operations</div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="class-schedules" href="#"><span class="material-symbols-outlined text-xl">event_available</span><span class="font-label-lg text-label-lg">Class &amp; Schedules</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Management</div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="packages-system-logs" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-label-lg text-label-lg">Packages &amp; System Logs</span></a></div></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] space-y-space-sm"><div class="flex items-center justify-between"><span class="font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Live Facility Status</span><span class="w-2 h-2 rounded-full bg-primary"></span></div><div class="space-y-space-xs"><div class="flex justify-between items-center"><span class="font-body-sm text-body-sm text-on-surface-variant">Capacity Load</span><span class="font-label-tabular text-label-tabular text-on-surface font-semibold">78%</span></div><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 78%"></div></div></div><div class="flex justify-between items-center pt-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">Courts in Use</span><span class="font-label-tabular text-label-tabular text-on-surface font-semibold">14 / 18</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Academy</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface font-semibold">Olympic Park Arena</span></div><div class="relative flex items-center w-80 lg:w-96"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-base">search</span><input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant outline-none focus:ring-2 focus:ring-secondary transition-all" placeholder="Search members, coaches, courts, bookings [Cmd+K]" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" type="button"><span class="material-symbols-outlined text-base">calendar_month</span><span>+ Quick Booking</span></button><button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" type="button"><span class="material-symbols-outlined text-base">person_add</span><span>+ Add User</span></button></div><div class="relative"><button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Marcus Vance</span><span class="font-caption text-caption text-on-surface-variant">Center Director</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAhGhaIoufow50eFdyfgKBpVy-qtzLD8kz76tVcxzqDkbc2xW9CD91hdetkAI-h7LDEfBI1OMQHYvga28VwH3U7ZpHZ-TDBBY2iF2Uh9evHUT-byj7DVJ8UVZSJ_bXr57Fnv2C1h9TQMnxQs5zXU4WkGxAnQu2Mh_r8yG5s4iJ_t_BqggmGg3ycZODzfCgkpN3H_Txl2ekCFGih31bGW97rbGupus88QnNHI-eI1WvMsrc6QYPHAQ_"/><button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-lg">settings</span></button></div></div></header><main class="w-full pt-16 px-gutter bg-surface min-h-screen"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Operational Overview & Quick Stats Bar -->
+<div class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-primary font-caption text-caption uppercase tracking-wider mb-space-xs font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Credential &amp; Facility Access Engine
+        </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">User &amp; Role Access Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">Control member profiles, coaches, and staff access credentials across academy facilities.</p>
+</div>
+<!-- Quick Action CTAs -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-lg">admin_panel_settings</span>
+<span>Bulk Permissions</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm font-label-lg text-label-lg" type="button">
+<span class="material-symbols-outlined text-lg">file_download</span>
+<span>Export Data</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container shadow-md transition-all font-label-lg text-label-lg" id="createUserBtn" type="button">
+<span class="material-symbols-outlined text-lg">person_add</span>
+<span>+ Create New User / Assign Role</span>
+</button>
+</div>
+</div>
+<!-- Quick Role Summary Badges (Counters) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Members Active</span>
+<span class="font-stat-value text-stat-value text-on-surface mt-1">1,482</span>
+<span class="font-caption text-caption text-primary flex items-center gap-0.5 mt-0.5 font-semibold">
+<span class="material-symbols-outlined text-xs">trending_up</span> +28 this week
+          </span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">sports_tennis</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Coaches Roster</span>
+<span class="font-stat-value text-stat-value text-on-surface mt-1">34 <span class="font-label-md text-label-md text-on-surface-variant font-normal">Active</span></span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5 font-semibold">4 Sports Divisions</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">sports</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Staff &amp; Operations</span>
+<span class="font-stat-value text-stat-value text-on-surface mt-1">18</span>
+<span class="font-caption text-caption text-tertiary mt-0.5 font-semibold">100% Shift Coverage</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-2xl">badge</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">System Administrators</span>
+<span class="font-stat-value text-stat-value text-on-surface mt-1">3</span>
+<span class="font-caption text-caption text-primary flex items-center gap-0.5 mt-0.5 font-semibold">
+<span class="material-symbols-outlined text-xs">verified_user</span> Root Clearance
+          </span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-2xl">security</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout: Table & Auxiliary Permissions Scope Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Filter Bar & Heavy Table (9 cols desktop) -->
+<div class="xl:col-span-9 flex flex-col gap-space-md">
+<!-- Filter Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row items-center gap-space-md">
+<!-- Search Input -->
+<div class="relative w-full lg:flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="Filter by name, email, or badge ID..." type="text"/>
+</div>
+<!-- Dropdown Filters Group -->
+<div class="flex items-center flex-wrap gap-space-sm w-full lg:w-auto">
+<!-- Role Filter -->
+<div class="relative flex-1 sm:flex-none">
+<select class="w-full appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface-container-low font-label-md text-label-md text-on-surface cursor-pointer outline-none shadow-sm">
+<option>All Roles</option>
+<option>Center Director</option>
+<option>Head Coach</option>
+<option>Assistant Coach</option>
+<option>Elite Member</option>
+<option>Junior Member</option>
+<option>Operations Staff</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+<!-- Status Filter -->
+<div class="relative flex-1 sm:flex-none">
+<select class="w-full appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface-container-low font-label-md text-label-md text-on-surface cursor-pointer outline-none shadow-sm">
+<option>All Statuses</option>
+<option>Active</option>
+<option>Pending Verification</option>
+<option>On Leave</option>
+<option>Suspended</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+<!-- Sport Specialization Filter -->
+<div class="relative flex-1 sm:flex-none">
+<select class="w-full appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface-container-low font-label-md text-label-md text-on-surface cursor-pointer outline-none shadow-sm">
+<option>All Disciplines</option>
+<option>Aquatics / Swim</option>
+<option>Tennis &amp; Racquet</option>
+<option>Basketball</option>
+<option>Strength &amp; Rehab</option>
+<option>Multi-Sport Operations</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+<button class="p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm flex items-center justify-center" title="Reset Filters" type="button">
+<span class="material-symbols-outlined text-base">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Data Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-caption text-caption uppercase tracking-wider font-semibold">
+<th class="py-3 px-space-md w-12 text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</th>
+<th class="py-3 px-space-md">User &amp; Contact</th>
+<th class="py-3 px-space-md">Category</th>
+<th class="py-3 px-space-md">Role &amp; Permissions</th>
+<th class="py-3 px-space-md">Primary Discipline</th>
+<th class="py-3 px-space-md text-center">Status</th>
+<th class="py-3 px-space-md text-right">Last Check-In</th>
+<th class="py-3 px-space-md text-center w-24">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Coach Elena Rostova -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Close up athletic portrait of Coach Elena Rostova, elite competitive swimming coach with sleek dark hair, wearing academy coach performance gear, bright ambient training arena lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuakXJseYvBDI4eKqF8SKPEvhyy72qm29DwfHqcntL0R8UmD2XXmxyexbkVZmcs0AsQl-rtG3BrczI_L3zb6yOlKNHu8Wo8xZFuCBLA3cTxibnzO5em6Xx0vNRSJuB4kCBcEFZZoBZp4z0TLhiGKZn9UvWA0TA2AzTeceevJrZmQ96byVPx-5sbf90nTyErIBiVAL487m10GJSRF1vA3iuy3_QaalPzHk1p6WRKawn-wv0Y3qJamxW"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Coach Elena Rostova</span>
+<span class="material-symbols-outlined text-primary text-sm" title="Verified Credential">verified</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant truncate">elena.rostova@apexsports.org</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-tabular text-caption text-on-surface-variant font-semibold">ID #AQ-8041</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-caption text-caption text-on-surface-variant">+1 (555) 392-1084</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-caption text-caption font-semibold">Coach</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Head Coach</span>
+<span class="font-caption text-caption text-primary mt-0.5">Full Facility + Rosters + Evaluations</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">Aquatics (Olympic Swim Coach)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span class="font-label-tabular text-label-tabular text-on-surface font-semibold">Today, 06:15 AM</span>
+<span class="font-caption text-caption text-on-surface-variant">Olympic Pool Gate A</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Quick Edit Permissions" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Profile" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Coach Marcus Thorne -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait of Coach Marcus Thorne, tennis director, mature professional coach with short hair and navy team polo in front of championship tennis court backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxYOZnJPqo4HmoZxajj5GWgSCAjcmzZb9lVCPa-6-OaWEd2yA8Y_XF654F6fu4VMOzVrQMZ7XysVhGF5NmH7tdAFfcW_WMkxSFZDc2jo5ztEiZKUp0EI4L7Ll86mc70nqmY4vXE0Nkjg0UgWkM6dSx05S8wjGKVXwD7GedVzZQ723S9R-98-9yZLNAXQoGDBzPrxQE-31B_cvNxfcerBZFpvLctBsl3x-N0VjGazP8CPSC2YjA5MKU"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Coach Marcus Thorne</span>
+<span class="material-symbols-outlined text-primary text-sm" title="Certified Director">verified</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant truncate">m.thorne@apexsports.org</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-tabular text-caption text-on-surface-variant font-semibold">ID #TN-1002</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-caption text-caption text-on-surface-variant">+1 (555) 441-8930</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-caption text-caption font-semibold">Director</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tennis Director</span>
+<span class="font-caption text-caption text-primary mt-0.5">Court Allocation + Master Schedule</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface">Tennis (USPTA Elite Master)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span class="font-label-tabular text-label-tabular text-on-surface font-semibold">Today, 08:30 AM</span>
+<span class="font-caption text-caption text-on-surface-variant">Center Court Turnstile</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Quick Edit Permissions" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Profile" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Julian Vance -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-sm font-bold shadow-sm flex-shrink-0">
+                      JV
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Julian Vance</span>
+<span class="font-caption text-caption text-on-surface-variant truncate">julian.vance@parent-apex.com</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-tabular text-caption text-on-surface-variant font-semibold">ID #MB-9921</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-caption text-caption text-on-surface-variant">+1 (555) 720-3341</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-caption text-caption font-semibold">Student / Member</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Member - Tier 1 Elite</span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">Full Olympic Facility + Recovery Suite</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">Aquatics (Youth National Squad)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span class="font-label-tabular text-label-tabular text-on-surface font-semibold">2 mins ago</span>
+<span class="font-caption text-caption text-on-surface-variant">Locker Room Turnstile</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Quick Edit Permissions" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Profile" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Sarah Jenkins -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Professional studio headshot of Sarah Jenkins, athletic operations coordinator with warm smile, hair pulled back, modern indoor multi-sport facility reception background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmzZeloQ-1M5uzRdnJQhmQ_Uor4QAtVdeFm-7izUo3MtxedCVxYfz-R8zoxuJCrcKLcD3ngJ4Qq6BuP2jn-k2M_4wMReDlCmPizBzk-lBacb7Lc58RqfzT2hWMyOYVHpq6B08YlJD6UBW-cT6HJ7PoG3-2FQcXP_gtAoJghDmFxdsfsYYm4yAXAe9jOS9WqYTbqR6-22T5-GJ19YgZN2BAcNXY7pCMh6eM03KIfIe6JVmhwEjzNF2r"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Sarah Jenkins</span>
+<span class="font-caption text-caption text-on-surface-variant truncate">sarah.j@apexsports.org</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-tabular text-caption text-on-surface-variant font-semibold">ID #ST-4022</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-caption text-caption text-on-surface-variant">+1 (555) 902-8871</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption font-semibold">Staff &amp; Desk</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Front Desk Lead</span>
+<span class="font-caption text-caption text-tertiary mt-0.5">Check-in Terminal + POS Billing + Daily Rosters</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-label-md text-label-md text-on-surface">General Facility Operations</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span class="font-label-tabular text-label-tabular text-on-surface font-semibold">Today, 07:00 AM</span>
+<span class="font-caption text-caption text-on-surface-variant">Central Hub Terminal 01</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Quick Edit Permissions" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Profile" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Coach David Kalu -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-headline-sm text-sm font-bold shadow-sm flex-shrink-0">
+                      DK
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Coach David Kalu</span>
+<span class="font-caption text-caption text-on-surface-variant truncate">david.kalu@apexsports.org</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-tabular text-caption text-on-surface-variant font-semibold">ID #BK-6019</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-caption text-caption text-on-surface-variant">+1 (555) 881-2309</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-caption text-caption font-semibold">Coach</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Basketball Coach</span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">Class Rosters + Training Arena A/B</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">Basketball (FIBA Advanced)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> On Leave
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span class="font-label-tabular text-label-tabular text-on-surface-variant">3 days ago</span>
+<span class="font-caption text-caption text-on-surface-variant">Court 3 Bio-Scanner</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Quick Edit Permissions" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Profile" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Liam O'Connor -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-sm font-bold shadow-sm flex-shrink-0">
+                      LO
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Liam O'Connor</span>
+<span class="font-caption text-caption text-on-surface-variant truncate">loconnor.tennis@gmail.com</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-tabular text-caption text-on-surface-variant font-semibold">ID #MB-4412</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-caption text-caption text-on-surface-variant">+1 (555) 612-4991</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-caption text-caption font-semibold">Student / Member</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Adult Member - Tennis Tier</span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">Racquet Club Courts + Locker Rooms</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface">Tennis (Adult League A)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span class="font-label-tabular text-label-tabular text-on-surface font-semibold">Yesterday, 06:40 PM</span>
+<span class="font-caption text-caption text-on-surface-variant">Clay Court East Gate</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Quick Edit Permissions" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Profile" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Maya Patel -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Headshot of athletic physiotherapist Maya Patel, professional sports clinic attire, warm modern gym and physical therapy background with state-of-the-art rehab equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs07gOqPN5Yh03Qs_kA1NA1ZBsCC2nY-Blh68nahXQ-gn4f34Zfbfahmc2udAezwSg34MoHw7Fzf5kbjI7ICpzqxGiNy4rpM5Uf4ZZ-AHINeT-b5l7i6-pXQq0EcL3Teas9FxNkaD70kXV8Homet3aipeMleof9iof4SaURT2eQdKugTWwN2e-IHg71s5tc9-zVBqhgCbEseThgGX8s-k7VmoKcxFwNfC-owHfXwST0KyScSIqo3iK"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Maya Patel</span>
+<span class="font-caption text-caption text-on-surface-variant truncate">maya.patel@physio-apex.org</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-tabular text-caption text-on-surface-variant font-semibold">ID #SC-3031</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-caption text-caption text-on-surface-variant">+1 (555) 234-9011</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption font-semibold">Contractor / Medical</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rehab Specialist</span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">Biometric Logs + Recovery Lab</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-md text-label-md text-on-surface">Strength &amp; Conditioning / Physio</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span> Pending Verification
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span class="font-label-tabular text-label-tabular text-on-surface-variant">Awaiting Credential</span>
+<span class="font-caption text-caption text-on-surface-variant">Orientation Pending</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Quick Edit Permissions" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Profile" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Austin Cole (Suspended demo) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center font-headline-sm text-sm font-bold shadow-sm flex-shrink-0">
+                      AC
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Austin Cole</span>
+<span class="font-caption text-caption text-on-surface-variant truncate">austin.c98@gmail.com</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-tabular text-caption text-on-surface-variant font-semibold">ID #MB-1190</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="font-caption text-caption text-on-surface-variant">+1 (555) 773-4019</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-caption text-caption font-semibold">Student / Member</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">General Member</span>
+<span class="font-caption text-caption text-error mt-0.5">Access Suspended - Payment In Arrears</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface">Tennis (Recreational)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-error font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Suspended
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="flex flex-col items-end">
+<span class="font-label-tabular text-label-tabular text-on-surface-variant">14 days ago</span>
+<span class="font-caption text-caption text-on-surface-variant">Turnstile Denied</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Quick Edit Permissions" type="button">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="View Profile" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Showing <span class="font-semibold text-on-surface">1</span> to <span class="font-semibold text-on-surface">8</span> of <span class="font-semibold text-on-surface">1,537</span> users
+            </span>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span>Per page:</span>
+<select class="appearance-none pl-2 pr-6 py-1 rounded bg-surface-container-low text-on-surface font-label-tabular text-label-tabular cursor-pointer outline-none shadow-sm">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant/40 cursor-not-allowed font-label-md text-label-md flex items-center gap-1" disabled="" type="button">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+<span>Previous</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-tabular text-label-tabular font-semibold" type="button">1</button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-high font-label-tabular text-label-tabular" type="button">2</button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-high font-label-tabular text-label-tabular" type="button">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-high font-label-tabular text-label-tabular" type="button">154</button>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Pinned Role Permissions Matrix Quick Reference & Security Scope (3 cols desktop) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Security Status & Permission Scopes Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">shield</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Access Matrix Scopes</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface-variant uppercase tracking-wider font-semibold">v4.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Standardized permission bundles governed by Apex Sports central identity policies.
+        </p>
+<!-- Scope Cards Stack -->
+<div class="space-y-space-sm">
+<!-- Scope: Admin -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Root Admin
+              </span>
+<span class="font-caption text-caption text-primary uppercase font-bold tracking-wider">Unrestricted</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full academy multi-campus system config, billing ledgers, staff clearance creation.</p>
+</div>
+<!-- Scope: Manage Bookings -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Manage Bookings
+              </span>
+<span class="font-caption text-caption text-secondary uppercase font-bold tracking-wider">Operational</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Court scheduling, arena overrides, private lesson booking, lane reservations.</p>
+</div>
+<!-- Scope: Edit Schedules -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> Coach Tier
+              </span>
+<span class="font-caption text-caption text-tertiary uppercase font-bold tracking-wider">Tactical</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Roster attendance logging, athlete biometric scores, training drill assignments.</p>
+</div>
+<!-- Scope: View Only -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span> Member Access
+              </span>
+<span class="font-caption text-caption text-on-surface-variant uppercase font-bold tracking-wider">Restricted</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Turnstile badge verification, locker room access, personal performance history.</p>
+</div>
+</div>
+<div class="pt-space-sm border-t border-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant uppercase font-semibold">Facility Gate Sync</span>
+<span class="font-label-tabular text-caption text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Live (0.12s)
+            </span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1.5">
+<div class="bg-primary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+<!-- Quick Facility Turnstile Telemetry Mini-Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider font-semibold">Active Gate Credentials</span>
+<span class="material-symbols-outlined text-secondary text-lg">sensors</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-stat-value text-stat-value text-on-surface">318</span>
+<span class="font-caption text-caption text-on-surface-variant">Turnstile taps last 60m</span>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant pt-space-xs border-t border-surface-container">
+<span>Failed Verifications</span>
+<span class="font-semibold text-error">2 attempts flagged</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide-out Modal / Drawer: Quick Permission Editor Preview (Hidden by default, triggered by JS) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-sm hidden" id="quickEditModal">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-xl shadow-2xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-150">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">
+            ER
+          </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Edit Role &amp; Access Scope</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Coach Elena Rostova · Aquatics Head Coach</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-space-sm py-space-sm border-y border-surface-container">
+<label class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Court &amp; Pool Scheduling Overrides</span>
+<span class="font-caption text-caption text-on-surface-variant">Allows priority block allocation for national team training</span>
+</div>
+<input checked="" class="w-5 h-5 accent-primary rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Athlete Medical &amp; Biometric Records</span>
+<span class="font-caption text-caption text-on-surface-variant">Access to readiness metrics, heart-rate zones, and recovery logs</span>
+</div>
+<input checked="" class="w-5 h-5 accent-primary rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Point of Sale &amp; Academy Package Sales</span>
+<span class="font-caption text-caption text-on-surface-variant">Authority to sell swim clinic passes and equipment</span>
+</div>
+<input class="w-5 h-5 accent-primary rounded" type="checkbox"/>
+</label>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors" id="cancelModalBtn" type="button">
+          Cancel
+        </button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-sm" id="saveModalBtn" type="button">
+          Save Credential Changes
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for modal demo
+  const modal = document.getElementById('quickEditModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const cancelModalBtn = document.getElementById('cancelModalBtn');
+  const saveModalBtn = document.getElementById('saveModalBtn');
+  const createUserBtn = document.getElementById('createUserBtn');
+
+  // Open modal on edit buttons click
+  document.querySelectorAll('button[title="Quick Edit Permissions"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      modal.classList.remove('hidden');
+    });
+  });
+
+  createUserBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
+
+  const closeModal = () => modal.classList.add('hidden');
+  closeModalBtn.addEventListener('click', closeModal);
+  cancelModalBtn.addEventListener('click', closeModal);
+  saveModalBtn.addEventListener('click', closeModal);
+
+  // Close on outside click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+</script></main></div></body></html>

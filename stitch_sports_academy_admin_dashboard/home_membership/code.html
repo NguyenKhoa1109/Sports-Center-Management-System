@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#eaedff", "surface-container-low": "#f2f3ff", "secondary-fixed": "#dbe1ff", "error": "#ba1a1a", "surface-container-high": "#e2e7ff", "on-primary": "#ffffff", "error-container": "#ffdad6", "surface-tint": "#006c4a", "on-tertiary-fixed-variant": "#005236", "background": "#faf8ff", "on-background": "#131b2e", "on-secondary-fixed-variant": "#003ea8", "inverse-surface": "#283044", "surface-bright": "#faf8ff", "on-tertiary": "#ffffff", "tertiary-container": "#00855b", "on-surface-variant": "#3d4a42", "on-primary-fixed": "#002114", "primary-container": "#00855d", "primary-fixed": "#85f8c4", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#00174b", "primary": "#006948", "on-tertiary-container": "#f5fff6", "tertiary-fixed": "#6ffbbe", "outline": "#6d7a72", "inverse-primary": "#68dba9", "surface": "#faf8ff", "on-secondary-container": "#fefcff", "on-primary-container": "#f5fff7", "on-error-container": "#93000a", "on-tertiary-fixed": "#002113", "on-secondary": "#ffffff", "secondary": "#0051d5", "secondary-fixed-dim": "#b4c5ff", "outline-variant": "#bccac0", "tertiary": "#006947", "on-error": "#ffffff", "inverse-on-surface": "#eef0ff", "on-surface": "#131b2e", "tertiary-fixed-dim": "#4edea3", "surface-container-highest": "#dae2fd", "on-primary-fixed-variant": "#005137", "primary-fixed-dim": "#68dba9", "secondary-container": "#316bf3", "surface-variant": "#dae2fd", "surface-dim": "#d2d9f4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-2xl": "3rem", "margin-mobile": "1rem", "margin": "2rem", "gutter-sm": "1rem", "gutter-lg": "2rem", "space-xs": "0.25rem" }, "fontFamily": { "caption": [ "Inter" ], "body-lg": [ "Inter" ], "body-sm": [ "Inter" ], "display": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "stat-value": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "label-md": [ "Inter" ], "label-tabular": [ "Inter" ] }, "fontSize": { "caption": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "display": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "stat-value": [ "30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-tabular": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #059669 - Font: plusJakartaSans - Mode: light - Roundness: rounded-md" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WXC6pdqgNL5BSlI8ck8CUPCB51yyf6bOEQ3htC5fi8dB9XbRa_xDMEAfo_jSO_f5C-Sl5fS0uKgyAIG3eTsf5gbdao9j1VQFzGfpKpi9-zsnF4guVzuuXD6OHy2UwKsN3LwdqGW45iMyFnG_8P0kZ0NFi_-rkqxh-X55KlZoeADG9a9lSQVcxdU-2HBBjtPL7dqEtbCSq0MBfNLwnfwpxOAmIic90St5x9IUQPxkh-aURSuv07hOskGcc"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface leading-none">APEX SPORTS</span><div class="flex items-center gap-space-xs mt-0.5"><span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md font-semibold leading-none uppercase">Member Hub</span></div></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-caption text-caption"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-medium">Olympic Park Arena</span><span class="text-outline">•</span><span>Open until 22:00</span></div></div><div class="flex items-center gap-space-md flex-1 max-w-xl mx-space-md hidden lg:flex"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search classes, drills, court slots, coaches..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-sm bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.04)]"><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wide">Tier 1 Elite</span></div><span class="font-caption text-caption text-outline">Multi-Sport • 24 Days Left</span></div><button class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md hover:bg-secondary-fixed-dim transition-colors" type="button">Renew</button></div><div class="relative flex items-center"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-caption text-[10px] font-bold">2</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-none">Julian Vance</span><span class="font-caption text-caption text-outline leading-tight mt-0.5">Elite High-Performance</span></div><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button></div></div></div></header><aside class="fixed left-0 top-20 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex flex-col gap-space-md px-space-sm"><div class="px-space-sm"><div class="font-caption text-caption font-semibold uppercase text-outline tracking-wider mb-space-xs">Operations &amp; Hub</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="home-and-memberships" href="#"><span class="material-symbols-outlined text-[20px]">stars</span><span class="font-label-lg text-label-lg">Home &amp; Memberships</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="class-booking" href="#"><span class="material-symbols-outlined text-[20px]">sports_tennis</span><span class="font-label-lg text-label-lg">Class Booking</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="personal-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">speed</span><span class="font-label-lg text-label-lg">Personal Dashboard</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="coach-feedback-and-plan" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-label-lg text-label-lg">Coach Feedback &amp; Plan</span></a></nav></div><div class="px-space-sm pt-space-xs"><div class="font-caption text-caption font-semibold uppercase text-outline tracking-wider mb-space-xs">Training Facilities</div><div class="flex flex-col gap-1.5 px-3 py-2.5 rounded-xl bg-surface-container-low"><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface font-semibold">Clay Courts 1-4</span><span class="font-caption text-caption text-primary font-bold">AVAILABLE</span></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface font-semibold">Olympic Pool</span><span class="font-caption text-caption text-secondary font-bold">LANES OPEN</span></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface font-semibold">Strength Lab</span><span class="font-caption text-caption text-outline font-bold">BUSY (84%)</span></div></div></div></div><div class="px-space-md"><div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between"><div class="flex flex-col"><span class="font-label-md text-label-md font-bold text-on-surface">Next: Speed &amp; Agility</span><span class="font-caption text-caption text-outline">Today • 16:30 • Track B</span></div><span class="material-symbols-outlined text-primary text-[20px]">timer</span></div></div></aside><div class="pl-64"><main class="relative pt-20 w-full min-h-screen bg-background"><div class="flex flex-col w-full pb-16">
+<!-- Top Welcome & Tier Status Section -->
+<section class="px-space-md lg:px-space-xl pt-6 pb-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-6">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-caption text-caption uppercase tracking-wider font-semibold">
+            Member ID • #APX-88204
+          </span>
+<span class="flex items-center gap-1 font-caption text-caption text-primary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            Biometrics Synced Today 08:45 AM
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+          Welcome back, Julian Vance!
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Your Olympic training cycle is pacing 14% ahead of targets. Here is your operational membership telemetry.
+        </p>
+</div>
+<!-- Quick Action Shortcuts -->
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Download Tax Invoices</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant hover:bg-secondary-fixed-dim font-label-md text-label-md transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_circle_up</span>
+<span>Upgrade Tier</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-md flex items-center gap-1.5" onclick="document.getElementById('checkoutDrawer').classList.remove('translate-x-full')" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Renew Early &amp; Save 10%</span>
+</button>
+</div>
+</div>
+<!-- Active Membership Command Card (Bento Split) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Main Status Module -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-md p-space-lg relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-16 -top-16 w-56 h-56 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold uppercase tracking-wider">
+                Current Active Plan
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-caption text-caption font-semibold">
+                Tier 1 Elite Multi-Sport
+              </span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-caption text-caption bg-surface-container-low px-2.5 py-1 rounded-md">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span>Expires Nov 30, 2024 • <strong>24 Days Remaining</strong></span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-6">
+<h2 class="font-display text-headline-lg font-bold text-on-surface">
+              All-Access Elite Multi-Sport
+            </h2>
+<div class="flex items-baseline gap-1 text-primary">
+<span class="font-display text-stat-value font-extrabold">$380</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ month (Auto-Renews)</span>
+</div>
+</div>
+<!-- Usage Metrics Bar Group -->
+<div class="space-y-4 mb-6">
+<div>
+<div class="flex justify-between items-center mb-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">sports_tennis</span>
+                  Monthly Coaching Drill Credits
+                </span>
+<span class="font-label-tabular text-label-tabular text-on-surface font-bold">18 / 24 Credits Used (75%)</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 75%"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-caption text-caption mt-1">
+<span>6 credits remaining before cycle reset</span>
+<span class="text-secondary font-medium">+2 Rollover banked</span>
+</div>
+</div>
+<!-- Operational Feature Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Unlimited Clay/Hard</span>
+<span class="font-caption text-caption text-on-surface-variant">Off-peak 06:00 - 15:30</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">hot_tub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Hydro Lounge</span>
+<span class="font-caption text-caption text-on-surface-variant">Unlimited Cold Plunge/Sauna</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Telemetry Feed</span>
+<span class="font-caption text-caption text-on-surface-variant">Live Heart &amp; Pace Sync</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 flex flex-wrap items-center justify-between gap-3 bg-surface-container-lowest">
+<div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-primary text-[18px]">shield</span>
+<span>Early renewal lock guarantees current $380/mo rate against upcoming 2025 price review.</span>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:text-on-secondary-fixed-variant font-bold flex items-center gap-1 transition-colors" onclick="document.getElementById('checkoutDrawer').classList.remove('translate-x-full')" type="button">
+<span>Review 12-Month Extension</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Athletic Telemetry & Facility Pass Visual Card -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Visual Pass Card -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl p-space-md shadow-md relative overflow-hidden flex flex-col justify-between h-full">
+<div class="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-6 translate-y-6">
+<svg fill="currentColor" height="220" viewbox="0 0 200 200" width="220">
+<path d="M40 0h120c22 0 40 18 40 40v120c0 22-18 40-40 40H40c-22 0-40-18-40-40V40C0 18 18 0 40 0z"></path>
+</svg>
+</div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">verified_user</span>
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-surface-container-lowest">DIGITAL NFC PASS</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/15 text-primary-fixed font-caption text-caption font-semibold">GATE ACCESS READY</span>
+</div>
+<div class="mb-4">
+<div class="font-caption text-caption uppercase text-outline tracking-wider">Assigned Athlete</div>
+<div class="font-headline-sm text-headline-sm font-bold text-surface-container-lowest">Julian K. Vance</div>
+<div class="font-caption text-caption text-surface-container-high/80">Primary Coach: Elena Rostova (WTA Elite)</div>
+</div>
+<!-- Micro SVG Barcode & NFC Icon -->
+<div class="p-3 bg-surface-container-lowest/10 rounded-lg flex items-center justify-between gap-3">
+<div class="flex items-center gap-1">
+<span class="w-1 h-8 bg-surface-container-lowest rounded-sm"></span>
+<span class="w-2 h-8 bg-surface-container-lowest rounded-sm"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest rounded-sm"></span>
+<span class="w-1.5 h-8 bg-surface-container-lowest rounded-sm"></span>
+<span class="w-1 h-8 bg-surface-container-lowest rounded-sm"></span>
+<span class="w-2.5 h-8 bg-surface-container-lowest rounded-sm"></span>
+<span class="w-0.5 h-8 bg-surface-container-lowest rounded-sm"></span>
+<span class="w-1 h-8 bg-surface-container-lowest rounded-sm"></span>
+<span class="w-2 h-8 bg-surface-container-lowest rounded-sm"></span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-caption text-caption text-surface-container-lowest font-mono font-bold tracking-wider">TAP TO SCAN</span>
+<span class="font-caption text-[9px] text-surface-container-highest">TURNSTILE A &amp; LOUNGE</span>
+</div>
+<span class="material-symbols-outlined text-primary-fixed text-[28px]">contactless</span>
+</div>
+</div>
+<div class="pt-4 mt-2 flex items-center justify-between text-caption font-caption text-surface-container-high">
+<span>Apex Olympic Center</span>
+<span>Secured via Apple Wallet / GPay</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Member Perks & Facility Quick Stats Banner -->
+<section class="px-space-md lg:px-space-xl py-2">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">percent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-outline uppercase font-semibold">Pro Shop Privilege</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">15% Exclusive Off</span>
+<span class="font-caption text-caption text-on-surface-variant">All Wilson, Babolat, &amp; Recovery Gear</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">group_add</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-outline uppercase font-semibold">Guest Privileges</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">2 Passes Left</span>
+<span class="font-caption text-caption text-on-surface-variant">Valid for Clay &amp; Hydro Lounge</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">lock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-outline uppercase font-semibold">Dedicated Storage</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Locker #42 Assigned</span>
+<span class="font-caption text-caption text-on-surface-variant">East Wing Clubhouse • Keypad Active</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[24px]">trophy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-outline uppercase font-semibold">Academy Circuit</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">UTR 9.4 Verified</span>
+<span class="font-caption text-caption text-primary font-medium">Ranked #14 in Regional Masters</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Academy Membership Tiers & Training Packages Section -->
+<section class="px-space-md lg:px-space-xl pt-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">fitness_center</span>
+<span class="font-caption text-caption text-primary uppercase font-bold tracking-wider">Official 2024-2025 Academy Catalog</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+          Academy Membership Tiers &amp; Training Packages
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Select or modify your programmatic training allocations. Upgrades apply immediately to court booking permissions.
+        </p>
+</div>
+<!-- Filter Tabs -->
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low" id="tierTabs">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest font-label-md text-label-md font-bold text-on-surface shadow-sm transition-all" type="button">
+          All Plans
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all" type="button">
+          Annual Elite
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all" type="button">
+          Monthly Subscriptions
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all" type="button">
+          Court Punch Passes
+        </button>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md items-stretch">
+<!-- Card 1: Youth High-Performance Annual -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col justify-between hover:shadow-lg transition-all group">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-caption text-caption font-bold uppercase">
+              Junior Academy
+            </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">school</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">
+            Youth High-Performance Annual
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Full junior competitive circuit development track with high-frequency technical court sessions.
+          </p>
+<div class="mb-4 p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-baseline gap-1 text-on-surface">
+<span class="font-display text-stat-value font-bold">$2,850</span>
+<span class="font-body-sm text-body-sm text-outline">/ year</span>
+</div>
+<div class="font-caption text-caption text-secondary font-semibold mt-0.5">
+              or $260/mo deferred payment plan
+            </div>
+</div>
+<!-- Feature Bullets -->
+<ul class="space-y-2 mb-6 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span><strong>4x weekly</strong> elite group coaching &amp; strategy</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>All-Regional Tournament pass &amp; coaching travel</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Quarterly 3D Biomechanics camera report</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Youth fitness nutrition &amp; recovery programming</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" type="button">
+<span>View Junior Syllabus</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Card 2: All-Access Elite Multi-Sport (CURRENT PLAN - Highlighted) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-lg p-space-md flex flex-col justify-between relative ring-2 ring-primary">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-primary text-on-primary font-caption text-caption font-bold uppercase tracking-wider shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+<span>Current Active Plan</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-3 mt-1">
+<span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant font-caption text-caption font-bold uppercase">
+              Current Tier
+            </span>
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">
+            All-Access Elite Multi-Sport
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Uncapped training across tennis, swim, and conditioning labs with priority coach scheduling.
+          </p>
+<div class="mb-4 p-3 rounded-lg bg-primary-fixed/25">
+<div class="flex items-baseline gap-1 text-on-surface">
+<span class="font-display text-stat-value font-bold text-primary">$380</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ month recurring</span>
+</div>
+<div class="font-caption text-caption text-primary font-semibold mt-0.5">
+              Includes 24 monthly coaching credits
+            </div>
+</div>
+<!-- Feature Bullets -->
+<ul class="space-y-2 mb-6 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span><strong>Unlimited</strong> off-peak clay &amp; hard court bookings</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>All Master group clinics &amp; physical conditioning</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span><strong>2x monthly</strong> private 1-on-1 coach credits</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Hydrotherapy lounge &amp; cold plunge full access</span>
+</li>
+</ul>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-bold transition-colors flex items-center justify-center gap-1.5 shadow-sm" onclick="document.getElementById('checkoutDrawer').classList.remove('translate-x-full')" type="button">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+<span>Renew &amp; Lock Rate</span>
+</button>
+<span class="font-caption text-caption text-center text-outline">Renews Dec 1 if no action taken</span>
+</div>
+</div>
+<!-- Card 3: Adult Masters Punch-Pass -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col justify-between hover:shadow-lg transition-all group">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-caption text-caption font-bold uppercase">
+              Flex Punch Pass
+            </span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors text-[20px]">confirmation_number</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">
+            Adult Masters Punch-Pass (20)
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Designed for traveling competitive athletes seeking non-recurring flexible academy access.
+          </p>
+<div class="mb-4 p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-baseline gap-1 text-on-surface">
+<span class="font-display text-stat-value font-bold">$550</span>
+<span class="font-body-sm text-body-sm text-outline">/ bundle</span>
+</div>
+<div class="font-caption text-caption text-on-surface-variant font-semibold mt-0.5">
+              $27.50 per session • 180-Day validity
+            </div>
+</div>
+<!-- Feature Bullets -->
+<ul class="space-y-2 mb-6 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>20 flexible session passes for Tennis, Swim, or Gym</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Peak and off-peak booking windows (7-day advance)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Shareable with up to 1 registered family athlete</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>No initiation fee or cancellation contract</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" type="button">
+<span>Purchase Pass Bundle</span>
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</button>
+</div>
+<!-- Card 4: Private 1-on-1 Pro Coaching Add-On -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col justify-between hover:shadow-lg transition-all group">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface-variant font-caption text-caption font-bold uppercase">
+              Pro Specialist Add-On
+            </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">sports</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">
+            Private 1-on-1 Pro Coaching
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Exclusive private 10-hour block matched directly with Head Pro Elena Rostova and high-speed telemetry.
+          </p>
+<div class="mb-4 p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-baseline gap-1 text-on-surface">
+<span class="font-display text-stat-value font-bold">$900</span>
+<span class="font-body-sm text-body-sm text-outline">/ 10 hours</span>
+</div>
+<div class="font-caption text-caption text-primary font-semibold mt-0.5">
+              Includes full video swing breakdown
+            </div>
+</div>
+<!-- Feature Bullets -->
+<ul class="space-y-2 mb-6 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Direct pairing with WTA Tour Coach Elena Rostova</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Ultra-slow-motion TrackMan radar telemetry</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Customized tactical match-play playbook</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Flexible scheduling including weekends</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" type="button">
+<span>Book Coaching Block</span>
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Slide-Out Checkout & Renewal Drawer (Visible state presented, collapsible via toggle) -->
+<div class="fixed inset-y-0 right-0 z-50 w-full sm:w-[480px] bg-surface-container-lowest shadow-2xl flex flex-col justify-between transition-transform duration-300 ease-in-out translate-x-0 overflow-y-auto" id="checkoutDrawer">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-lowest sticky top-0 z-10 shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-caption text-caption text-primary font-bold uppercase tracking-wider">Fast-Track Checkout</span>
+</div>
+<button class="p-1 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" onclick="document.getElementById('checkoutDrawer').classList.add('translate-x-full')" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">
+        Renew &amp; Extend Membership
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Plan: <strong>All-Access Elite Multi-Sport</strong>
+</p>
+</div>
+<!-- Drawer Content Body -->
+<div class="p-space-lg flex-1 space-y-6">
+<!-- Billing Cycle Toggle Selector -->
+<div class="p-3 rounded-xl bg-surface-container-low">
+<label class="block font-label-md text-label-md text-on-surface font-bold mb-2">Choose Billing Structure</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="p-2.5 rounded-lg bg-surface-container-lowest text-left transition-all shadow-sm ring-2 ring-primary" id="toggleAnnual" onclick="setBilling('annual')" type="button">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Annual Prepay</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-caption text-[10px] font-bold">SAVE 10%</span>
+</div>
+<div class="font-caption text-caption text-on-surface-variant mt-1">$4,104 / year ($342/mo)</div>
+</button>
+<button class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all" id="toggleMonthly" onclick="setBilling('monthly')" type="button">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Monthly Flex</span>
+<span class="text-outline font-caption text-[10px]">Standard</span>
+</div>
+<div class="font-caption text-caption text-on-surface-variant mt-1">$380 / month billed monthly</div>
+</button>
+</div>
+</div>
+<!-- Financial Calculation Summary Box -->
+<div class="p-4 rounded-xl bg-surface-container-low space-y-2.5">
+<div class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wider text-outline mb-2">
+          Order Summary &amp; Terms
+        </div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Tier Duration Extension</span>
+<span class="font-medium text-on-surface">12 Months (Dec 2024 - Nov 2025)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Base Standard Subtotal</span>
+<span class="font-mono text-on-surface" id="subtotalVal">$4,560.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-primary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_offer</span>
+            Early Bird Renewal Discount (10%)
+          </span>
+<span class="font-mono font-bold" id="discountVal">-$456.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Olympic Facility &amp; Equipment Amenity Fee</span>
+<span class="text-primary font-medium">$0 (Waived)</span>
+</div>
+<div class="pt-3 border-t border-outline-variant flex justify-between items-baseline">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block">Total Due Today</span>
+<span class="font-caption text-caption text-outline">Locked rate guarantee for 365 days</span>
+</div>
+<div class="text-right">
+<span class="font-display text-stat-value font-extrabold text-primary" id="totalDueVal">$4,104.00</span>
+</div>
+</div>
+</div>
+<!-- Payment Method Selection -->
+<div class="space-y-3">
+<label class="block font-label-md text-label-md text-on-surface font-bold">Select Stored Payment Source</label>
+<!-- Method 1: Saved Visa -->
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer hover:bg-surface-container-low transition-colors ring-2 ring-primary">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 text-primary focus:ring-primary accent-primary" name="paymentMethod" type="radio"/>
+<div class="w-9 h-6 rounded bg-on-surface flex items-center justify-center text-surface-container-lowest font-bold text-[10px] tracking-wider">
+              VISA
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Visa ending in •••• 4821</span>
+<span class="font-caption text-caption text-outline">Expires 09/27 • Primary Account</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-caption text-caption font-semibold">DEFAULT</span>
+</label>
+<!-- Method 2: Apple Pay -->
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary focus:ring-primary accent-primary" name="paymentMethod" type="radio"/>
+<div class="w-9 h-6 rounded bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-[11px]">
+              Pay
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Apple Pay</span>
+<span class="font-caption text-caption text-outline">Instant Touch ID Verification</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</label>
+<!-- Method 3: Academy Wire -->
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary focus:ring-primary accent-primary" name="paymentMethod" type="radio"/>
+<div class="w-9 h-6 rounded bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Corporate Bank Wire (ACH)</span>
+<span class="font-caption text-caption text-outline">Chase Business •••• 1009</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</label>
+</div>
+<!-- Legal & Terms Checkbox -->
+<div class="flex items-start gap-2.5 pt-1">
+<input checked="" class="w-4 h-4 mt-0.5 rounded text-primary focus:ring-primary accent-primary" id="termsAck" type="checkbox"/>
+<label class="font-caption text-caption text-on-surface-variant cursor-pointer" for="termsAck">
+          I authorize Apex Sports Academy to bill the selected payment method. I agree to the Elite Training Facility Safety Regulations, 24-day advance cancellation policies, and automated annual renewals.
+        </label>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-surface-container-lowest shadow-md sticky bottom-0 z-10 flex flex-col gap-3">
+<button class="w-full py-3.5 px-4 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold transition-all shadow-lg flex items-center justify-center gap-2" id="confirmCheckoutBtn" onclick="triggerSuccessState()" type="button">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span id="ctaBtnText">Confirm &amp; Renew Membership ($4,104)</span>
+</button>
+<div class="flex items-center justify-between text-outline font-caption text-caption px-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">lock</span>
+<span>256-Bit TLS Stripe Level 1 PCI Sync</span>
+</div>
+<span>Instant receipt to j.vance@apex.io</span>
+</div>
+</div>
+</div>
+<!-- Inline Script for Billing Toggle & Feedback State -->
+<script>
+    function setBilling(mode) {
+      const annualBtn = document.getElementById('toggleAnnual');
+      const monthlyBtn = document.getElementById('toggleMonthly');
+      const subtotal = document.getElementById('subtotalVal');
+      const discount = document.getElementById('discountVal');
+      const totalDue = document.getElementById('totalDueVal');
+      const ctaBtn = document.getElementById('ctaBtnText');
+
+      if (mode === 'annual') {
+        annualBtn.classList.add('ring-2', 'ring-primary', 'bg-surface-container-lowest');
+        annualBtn.classList.remove('bg-surface-container-low');
+        monthlyBtn.classList.remove('ring-2', 'ring-primary', 'bg-surface-container-lowest');
+        monthlyBtn.classList.add('bg-surface-container-low');
+
+        subtotal.textContent = '$4,560.00';
+        discount.textContent = '-$456.00';
+        totalDue.textContent = '$4,104.00';
+        ctaBtn.textContent = 'Confirm & Renew Membership ($4,104)';
+      } else {
+        monthlyBtn.classList.add('ring-2', 'ring-primary', 'bg-surface-container-lowest');
+        monthlyBtn.classList.remove('bg-surface-container-low');
+        annualBtn.classList.remove('ring-2', 'ring-primary', 'bg-surface-container-lowest');
+        annualBtn.classList.add('bg-surface-container-low');
+
+        subtotal.textContent = '$380.00';
+        discount.textContent = '$0.00 (Annual Only)';
+        totalDue.textContent = '$380.00';
+        ctaBtn.textContent = 'Confirm Monthly Renewal ($380/mo)';
+      }
+    }
+
+    function triggerSuccessState() {
+      const btn = document.getElementById('confirmCheckoutBtn');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">autorenew</span><span>Processing Olympic Renewal...</span>';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.classList.remove('bg-primary', 'hover:bg-primary-container');
+        btn.classList.add('bg-primary-container', 'text-on-primary-container');
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Renewed for 2025! Pass Active</span>';
+        
+        setTimeout(() => {
+          document.getElementById('checkoutDrawer').classList.add('translate-x-full');
+        }, 1400);
+      }, 900);
+    }
+  </script>
+</div></main></div><div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-space-xs"><div class="w-80 md:w-96 rounded-xl bg-surface-container-lowest shadow-[0_8px_20px_-4px_rgba(15,23,42,0.12)] p-space-md flex flex-col gap-space-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Apex AI Athletic Assistant</span></div><span class="material-symbols-outlined text-outline text-[18px] cursor-pointer hover:text-on-surface">expand_more</span></div><p class="font-caption text-caption text-on-surface-variant">Ready to analyze biometrics, book courts, or summarize Elena's technical notes.</p><div class="flex flex-wrap gap-1.5"><button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-caption text-caption hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">What's my next session?</button><button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-caption text-caption hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">Book Court 1 Clay</button><button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-caption text-caption hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">Explain Coach Elena's drill comments</button></div><div class="relative flex items-center"><input class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Ask Apex AI tactical question..." type="text"/><button class="absolute right-2 text-primary hover:text-primary-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">arrow_upward</span></button></div></div></div></body></html>

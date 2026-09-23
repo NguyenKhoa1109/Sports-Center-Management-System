@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error":"#ffffff","on-tertiary-fixed":"#002113","on-surface-variant":"#3d4a42","on-primary":"#ffffff","on-secondary-fixed-variant":"#003ea8","background":"#faf8ff","surface-container-high":"#e2e7ff","tertiary":"#006947","primary":"#006948","secondary-fixed-dim":"#b4c5ff","surface-container-highest":"#dae2fd","on-tertiary-container":"#f5fff6","primary-container":"#00855d","tertiary-container":"#00855b","on-secondary":"#ffffff","tertiary-fixed":"#6ffbbe","inverse-surface":"#283044","secondary-container":"#316bf3","on-primary-fixed-variant":"#005137","tertiary-fixed-dim":"#4edea3","inverse-primary":"#68dba9","surface-tint":"#006c4a","surface-variant":"#dae2fd","on-tertiary-fixed-variant":"#005236","on-primary-container":"#f5fff7","surface-container-lowest":"#ffffff","on-surface":"#131b2e","on-tertiary":"#ffffff","on-primary-fixed":"#002114","primary-fixed-dim":"#68dba9","secondary-fixed":"#dbe1ff","secondary":"#0051d5","surface":"#faf8ff","on-error-container":"#93000a","primary-fixed":"#85f8c4","surface-container-low":"#f2f3ff","on-secondary-container":"#fefcff","outline-variant":"#bccac0","error-container":"#ffdad6","inverse-on-surface":"#eef0ff","on-secondary-fixed":"#00174b","outline":"#6d7a72","error":"#ba1a1a","surface-dim":"#d2d9f4","surface-container":"#eaedff","on-background":"#131b2e","surface-bright":"#faf8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","gutter-lg":"2rem","space-lg":"1.5rem","space-xl":"2rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-mobile":"1rem","space-md":"1rem","margin":"2rem","space-2xl":"3rem","space-xs":"0.25rem"},"fontFamily":{"stat-value":["Plus Jakarta Sans"],"label-tabular":["Inter"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"caption":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-lg":["Inter"],"display":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"]},"fontSize":{"stat-value":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-tabular":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"caption":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"display":["40px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ApexSports Academy Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vcyens9Jg8yCEqpSwp0HCxklIUD-Rp8OYrdlGjTEU74F46_40-dzZS8jZjODSITNo7Lz-kyb2secmRcDfn_0nW8QhyW27WeDPoSOmZ40WwH9MlylnHVvVfjToLhJj5y9NLozlNB8IpsbD2M4Qpvy3afviXZzzU1PV-9lSpu3AxWvoPFvha9X0rfik1Za8oDVg_aqyM99f161JYii4_Su4Gy86MIywD3EJ5Ekk6zMq3BM-mVJhjqT6Nqg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Apex Sports OS</span><span class="font-caption text-caption text-on-surface-variant">Athletics Enterprise</span></div></div><span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary font-caption text-caption uppercase tracking-wider font-semibold">Central Hub</span></div><div class="px-space-md mb-space-md"><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors"><div class="flex items-center gap-space-sm overflow-hidden"><span class="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0 animate-pulse"></span><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Olympic Park Arena</span><span class="font-caption text-caption text-on-surface-variant truncate">Main Campus · Primary</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-base">unfold_more</span></div></div><nav class="flex-1 px-space-md space-y-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-reports" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-label-lg text-label-lg">Dashboard &amp; Reports</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Directory</div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="users-roles" href="#"><span class="material-symbols-outlined text-xl">group</span><span class="font-label-lg text-label-lg">Users &amp; Roles</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Operations</div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="class-schedules" href="#"><span class="material-symbols-outlined text-xl">event_available</span><span class="font-label-lg text-label-lg">Class &amp; Schedules</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Management</div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="packages-system-logs" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-label-lg text-label-lg">Packages &amp; System Logs</span></a></div></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] space-y-space-sm"><div class="flex items-center justify-between"><span class="font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Live Facility Status</span><span class="w-2 h-2 rounded-full bg-primary"></span></div><div class="space-y-space-xs"><div class="flex justify-between items-center"><span class="font-body-sm text-body-sm text-on-surface-variant">Capacity Load</span><span class="font-label-tabular text-label-tabular text-on-surface font-semibold">78%</span></div><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 78%"></div></div></div><div class="flex justify-between items-center pt-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">Courts in Use</span><span class="font-label-tabular text-label-tabular text-on-surface font-semibold">14 / 18</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Academy</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface font-semibold">Olympic Park Arena</span></div><div class="relative flex items-center w-80 lg:w-96"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-base">search</span><input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant outline-none focus:ring-2 focus:ring-secondary transition-all" placeholder="Search members, coaches, courts, bookings [Cmd+K]" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" type="button"><span class="material-symbols-outlined text-base">calendar_month</span><span>+ Quick Booking</span></button><button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" type="button"><span class="material-symbols-outlined text-base">person_add</span><span>+ Add User</span></button></div><div class="relative"><button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Marcus Vance</span><span class="font-caption text-caption text-on-surface-variant">Center Director</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAhGhaIoufow50eFdyfgKBpVy-qtzLD8kz76tVcxzqDkbc2xW9CD91hdetkAI-h7LDEfBI1OMQHYvga28VwH3U7ZpHZ-TDBBY2iF2Uh9evHUT-byj7DVJ8UVZSJ_bXr57Fnv2C1h9TQMnxQs5zXU4WkGxAnQu2Mh_r8yG5s4iJ_t_BqggmGg3ycZODzfCgkpN3H_Txl2ekCFGih31bGW97rbGupus88QnNHI-eI1WvMsrc6QYPHAQ_"/><button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-lg">settings</span></button></div></div></header><main class="w-full pt-16 px-gutter bg-surface min-h-screen"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Top Command Bar: Title, Live Status & Major Actions -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md py-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Class &amp; Facility Schedule Master</h1>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-caption text-caption uppercase tracking-wider font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          14 Classes in Session Today
+        </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time facility utilization, coach workload balance, and court allocations across Olympic Park Arena.</p>
+</div>
+<!-- Action Toolbar -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-lg text-label-lg transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">print</span>
+<span>Print Daily Run-Sheet</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-high text-secondary hover:bg-surface-container-highest font-label-lg text-label-lg transition-all" id="trigger-swap-coach" type="button">
+<span class="material-symbols-outlined text-lg">swap_horiz</span>
+<span>Assign / Swap Coach</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>+ Schedule Class</span>
+</button>
+</div>
+</div>
+<!-- Operational Filter Strip & Week Navigator -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md mb-space-lg">
+<!-- Date Navigator -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-low rounded-lg p-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-lowest hover:text-on-surface transition-colors" title="Previous Week" type="button">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="px-space-sm py-1 rounded-lg text-primary font-label-md text-label-md hover:bg-surface-container-lowest transition-colors" type="button">
+          Today
+        </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-lowest hover:text-on-surface transition-colors" title="Next Week" type="button">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">calendar_today</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Week of Nov 4 – Nov 10, 2024</span>
+</div>
+</div>
+<!-- Sports Category Selector Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-tabular text-label-tabular whitespace-nowrap shadow-sm" type="button">
+        All Sports <span class="ml-1 opacity-80">(24)</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-tabular text-label-tabular whitespace-nowrap transition-colors" type="button">
+        Tennis &amp; Padel <span class="ml-1 text-on-surface-variant font-normal">(8)</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-tabular text-label-tabular whitespace-nowrap transition-colors" type="button">
+        Aquatics <span class="ml-1 text-on-surface-variant font-normal">(6)</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-tabular text-label-tabular whitespace-nowrap transition-colors" type="button">
+        Basketball <span class="ml-1 text-on-surface-variant font-normal">(5)</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-tabular text-label-tabular whitespace-nowrap transition-colors" type="button">
+        Gymnastics <span class="ml-1 text-on-surface-variant font-normal">(3)</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-tabular text-label-tabular whitespace-nowrap transition-colors" type="button">
+        Strength &amp; Conditioning <span class="ml-1 text-on-surface-variant font-normal">(2)</span>
+</button>
+</div>
+<!-- Court & View Selector Dropdown -->
+<div class="flex items-center gap-space-sm self-end lg:self-center">
+<div class="relative inline-flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-base">stadium</span>
+<select class="h-9 pl-8 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md outline-none cursor-pointer hover:bg-surface-container appearance-none transition-colors">
+<option>All Courts &amp; Rooms (5 Zones)</option>
+<option>Court 1 - Indoor Clay</option>
+<option>Court 2 - Hard Court</option>
+<option>Olympic Pool Lanes 1-4</option>
+<option>Main Gymnasium</option>
+<option>Studio B (Conditioning)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-base">calendar_view_week</span>
+</button>
+<button class="w-7 h-7 rounded text-on-surface-variant hover:text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-base">view_timeline</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Attention Banner: Quick Coach Reassignment & Roster Slot (Operational Callout) -->
+<div class="bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-lowest p-space-lg rounded-xl shadow-sm mb-space-lg">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-2xl">published_with_changes</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption uppercase text-secondary font-bold tracking-wider">Fast Roster Configuration</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-caption text-caption font-semibold">Priority Action</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Quick Coach Reassignment &amp; Roster Slot</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live sub-bench synchronization. Changes notify athletes and update biometric logs automatically.</p>
+</div>
+</div>
+<!-- Quick Interactive Fields -->
+<div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-space-sm w-full lg:w-auto items-center">
+<!-- Target Class Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption uppercase text-on-surface-variant font-semibold">Target Session</label>
+<div class="relative">
+<select class="w-full h-9 pl-2.5 pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md outline-none focus:bg-surface-bright shadow-xs appearance-none">
+<option selected="">Advanced Junior Tennis Clinic (16:30)</option>
+<option>Youth Padel Beginners (18:00 - Pending)</option>
+<option>Varsity Tactical Basketball (14:00)</option>
+<option>High Performance Drills (17:00)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-on-surface-variant text-base pointer-events-none">unfold_more</span>
+</div>
+</div>
+<!-- Coach Swap Assignment -->
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption uppercase text-on-surface-variant font-semibold">Instructor Swap</label>
+<div class="relative">
+<select class="w-full h-9 pl-2.5 pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md outline-none focus:bg-surface-bright shadow-xs appearance-none">
+<option>Coach Elena Rostova (Assigned)</option>
+<option selected="">Coach Carlos Mendez (Available · Tier 1)</option>
+<option>Coach Marcus Thorne (Max Load 5.5h)</option>
+<option>Coach Sarah Wu (Available · 16:00+)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-on-surface-variant text-base pointer-events-none">swap_calls</span>
+</div>
+</div>
+<!-- Court Allocation -->
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption uppercase text-on-surface-variant font-semibold">Zone Allocation</label>
+<div class="relative">
+<select class="w-full h-9 pl-2.5 pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md outline-none focus:bg-surface-bright shadow-xs appearance-none">
+<option selected="">Court 1 - Indoor Clay</option>
+<option>Court 2 - Hard Court</option>
+<option>Court 3 - Outdoor Clay</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-on-surface-variant text-base pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Apply Button with Capacity Peek -->
+<div class="flex flex-col gap-1 justify-end sm:col-span-3 lg:col-span-1">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1 justify-end">
+<span class="material-symbols-outlined text-sm">groups</span> 14/16 Enrolled (2 slots)
+          </span>
+<button class="w-full h-9 rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container font-label-lg text-label-lg transition-colors shadow-xs flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">check</span> Confirm Shift
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Workspace: Visual Timetable & Facility Analytics Sidebar -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Visual Timetable Schedule Board (9 Columns) -->
+<div class="xl:col-span-9 bg-surface-container-lowest rounded-xl shadow-sm p-space-md overflow-hidden flex flex-col">
+<div class="flex items-center justify-between pb-space-md border-b-0">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Interactive Court Matrix</span>
+<span class="font-caption text-caption text-on-surface-variant">· 5 Zones Active</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-caption text-caption">
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-primary/20"></span> Tennis/Padel</span>
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-secondary/20"></span> Aquatics</span>
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-tertiary/20"></span> Basketball</span>
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-surface-container-highest"></span> Conditioning</span>
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-error/20"></span> Unassigned</span>
+</div>
+</div>
+<!-- Timetable Scroll Container -->
+<div class="overflow-x-auto scrollbar-none w-full mt-2">
+<div class="min-w-[960px] grid grid-cols-6 gap-2">
+<!-- Header Row: Columns -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center justify-center text-center">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-semibold">Time Window</span>
+<span class="font-label-tabular text-label-tabular text-on-surface font-bold">Today</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Court 1</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-caption text-caption font-semibold">Clay</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant truncate">Indoor Grandstand</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Court 2</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-caption text-caption font-semibold">Hard</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant truncate">Outdoor Floodlight</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Olympic Pool</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-caption text-caption font-semibold">Lanes 1-4</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant truncate">Aquatics Pavilion</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Main Gymnasium</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption font-semibold">Maple</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant truncate">North Complex</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Studio B</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-caption text-caption font-semibold">Sprint/Fit</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant truncate">Performance Wing</span>
+</div>
+<!-- TIME ROW: 07:00 -->
+<div class="py-space-md flex flex-col items-center justify-center bg-surface-container-low/50 rounded-lg">
+<span class="font-stat-value text-stat-value text-on-surface text-base">07:00</span>
+<span class="font-caption text-caption text-on-surface-variant">08:15</span>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<!-- Olympic Pool 07:00 Class -->
+<div class="p-space-sm rounded-lg bg-secondary/10 hover:bg-secondary/15 transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-secondary font-bold leading-tight">Morning Masters Swim</span>
+<span class="material-symbols-outlined text-secondary text-base">pool</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait photo of head swim coach Elena Rostova wearing athletic sunglasses and Olympic coaching apparel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDueHAXlcS6LSpTNaVqD2qsOl29rtU_GaAvpFjI6o-2G8i4tTCl7BhSmq3MGsc8dmlkwZTU5_41hThyH_SKU4sXV_s8R2BOQ4A61b7nb5wCS1twKqB5L1kCDKsiLf9vOOmQtUzsoCeWuLV89AfcfTvponhwhgaRfRf9D-r4U9RFtUZcOiLNTVjakxcA908lhbsYGLItiTre2EOu-ZifcyrWrC-6LT_jzVy9oTwBXBJxKPT6UOWrw_iP"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach Elena</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-secondary text-on-secondary font-caption text-caption font-semibold">18/20 Enrolled</span>
+<span class="font-caption text-caption text-primary font-bold">Completed</span>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<!-- TIME ROW: 08:30 -->
+<div class="py-space-md flex flex-col items-center justify-center bg-surface-container-low/50 rounded-lg">
+<span class="font-stat-value text-stat-value text-on-surface text-base">08:30</span>
+<span class="font-caption text-caption text-on-surface-variant">10:00</span>
+</div>
+<!-- Court 1 08:30 Class -->
+<div class="p-space-sm rounded-lg bg-primary/10 hover:bg-primary/15 transition-all flex flex-col justify-between shadow-xs ring-1 ring-primary/20">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight">Junior Elite Tennis Clinic</span>
+<span class="material-symbols-outlined text-primary text-base">sports_tennis</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait photo of tennis coach Marcus Thorne on court in high performance athletic visor and jersey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmQIL7KwaMBeUQMl4_RzhVL2pYT6DYhNbdXUV4vCzSfWetg9Ejc5Pe6HSBiFLWYP4kZaqsaT7ZaF2L92FlwVPJDvzJiaovQapw8W5G323eLkvsOlAATXlv7aDO7HYiDAjXayg7oMamL-0hgDRDN-6aQ7LqWWDdfVWNrLY5GupHVXybd2L7wDIDfExUtdfegmQ1FiNd1TkXMWR4YnbM3sFLitn5JTbB3HiYbEibUmYkn658funCxEbu"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach Marcus T.</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-primary text-on-primary font-caption text-caption font-semibold">12/12 Full</span>
+<span class="font-caption text-caption text-secondary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> Live Now
+              </span>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Routine Maintenance</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Staff Drills</div>
+<!-- Studio B 09:00 Class -->
+<div class="p-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Athletic Core &amp; Agility</span>
+<span class="material-symbols-outlined text-on-surface-variant text-base">fitness_center</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Athletic portrait of coach Sarah Wu in professional fitness training attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtInAtSDDTnlIa1H_Vy0rHMWvTlABqig9EEbIX1lNPqlp_tmGakPERfTym5CWtDY0hmoqKZ0w8hvqjekwlfcp08AJk4pN9nZqQkCpvmOQ6TIipVuCS4Dd6LaYLE8I-J42UdNTRfnsMCH_MjnEHNKULLKLcR46Ynz04BGP8XJ6E5hQKjSu5tS04-IxQjcoyDJDlwC12pgyUBYusuz2ylSAumcoay5OnWnRtEWTVmD9jTeltPFLb7Qhq"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach Sarah Wu</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-caption text-caption font-semibold">10/12 Enrolled</span>
+<span class="font-caption text-caption text-primary font-bold">Confirmed</span>
+</div>
+</div>
+<!-- TIME ROW: 10:00 -->
+<div class="py-space-md flex flex-col items-center justify-center bg-surface-container-low/50 rounded-lg">
+<span class="font-stat-value text-stat-value text-on-surface text-base">10:00</span>
+<span class="font-caption text-caption text-on-surface-variant">11:30</span>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<!-- Court 2 10:00 Practice -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Open Practice / Ball Machine</span>
+<span class="material-symbols-outlined text-on-surface-variant text-base">smart_toy</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">person_off</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">Self-Guided</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-caption text-caption font-semibold">Reserved (2)</span>
+<span class="font-caption text-caption text-primary font-bold">Active</span>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Lap Lane Free Swim</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<!-- TIME ROW: 14:00 -->
+<div class="py-space-md flex flex-col items-center justify-center bg-surface-container-low/50 rounded-lg">
+<span class="font-stat-value text-stat-value text-on-surface text-base">14:00</span>
+<span class="font-caption text-caption text-on-surface-variant">15:30</span>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Aquacise Open</div>
+<!-- Main Gym 14:00 Class -->
+<div class="p-space-sm rounded-lg bg-tertiary/10 hover:bg-tertiary/15 transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-tertiary font-bold leading-tight">Varsity Basketball Tactical</span>
+<span class="material-symbols-outlined text-tertiary text-base">sports_basketball</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait photo of head varsity coach David Kalu on court holding tactical chalkboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIB6DZnxdTVmqXurff2kPPMhjpP4mR5X5VJwO6c1pi7O7jxA6tbenoZtfki8O79bJ-jHOkgrvnWVWtdrAwtMS_A0dJpyxEUu6vqoGajp__cJoRR32XDzxi5HMujEM4kqA1jrqwS6W6RFuXZAirc-5n3DLd1MsQBAV6SLKOE1vloCn5zzaJTzSHiFX5qHYgwNk2MbrWhN-2l9kBz1v92j8UicPY50eHuWwQ9dz99XvTMXLvEnQlDUQd"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach David Kalu</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary text-on-tertiary font-caption text-caption font-semibold">22/25 Enrolled</span>
+<span class="font-caption text-caption text-primary font-bold">Ready</span>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<!-- TIME ROW: 15:30 -->
+<div class="py-space-md flex flex-col items-center justify-center bg-surface-container-low/50 rounded-lg">
+<span class="font-stat-value text-stat-value text-on-surface text-base">15:30</span>
+<span class="font-caption text-caption text-on-surface-variant">17:00</span>
+</div>
+<!-- Court 1 15:30 Class -->
+<div class="p-space-sm rounded-lg bg-primary/10 hover:bg-primary/15 transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight">Adult Master Class</span>
+<span class="material-symbols-outlined text-primary text-base">sports_tennis</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Headshot of tennis trainer Carlos Mendez smiling on clay court in sportswear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA82GamMMeH4obGGZd6RK2x66LvbwYSW2vIJyGYFdK0uao4rwP8M1ODSk_9UmBbuv1eXMxrUVw4kSgIGTbpeEBWGCGwJwIeLlUrpIWcpI7EKghEO0f5Y3j0q7kYiZWMfQdwnlgRrcj2g7RgPq1ihfU-ry0aMMsO5_NyIS2YO8QvUpcpPEGmvUqQafXwVzzDS8jOzi5lGRrq99odOaOFYHzve9dapxRTCnM_8MZa_1ihi9PdaWJosGKq"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach Carlos M.</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-primary text-on-primary font-caption text-caption font-semibold">8/8 Full</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">Waitlist (1)</span>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Transition Prep</div>
+<!-- Olympic Pool 16:00 Class -->
+<div class="p-space-sm rounded-lg bg-secondary/10 hover:bg-secondary/15 transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-secondary font-bold leading-tight">Youth Stroke Correction</span>
+<span class="material-symbols-outlined text-secondary text-base">pool</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait of swimming instructor Elena Rostova holding a stopwatch on pool deck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6ACcKPUti_P7cpKRJUGmSlVf4KiPYmnVa-Chpoo5XTZRNLw4p6EXjLzq6hEJAbfAbyU4Oo8EO1B6U8GcSIpMK5DiZDVHsBd1IkmdH4W1euTCwbkJTmrNaXnIciUb3FV43_hZiK8qSfYgff3uC_L4aAqt0sm4Jr4PkqusQI0Y3x_ipAuNToJ3G7buzClPnN-vFoDvaaguEpv0KdvupkRRqgk28lhBSFiaTpeaQhFLC83gyrfQMinAT"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach Elena</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-secondary text-on-secondary font-caption text-caption font-semibold">15/15 Full</span>
+<span class="font-caption text-caption text-primary font-bold">Assigned</span>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<!-- TIME ROW: 17:00 / 17:30 -->
+<div class="py-space-md flex flex-col items-center justify-center bg-surface-container-low/50 rounded-lg">
+<span class="font-stat-value text-stat-value text-on-surface text-base">17:00</span>
+<span class="font-caption text-caption text-on-surface-variant">18:30</span>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<!-- Court 2 17:00 Class -->
+<div class="p-space-sm rounded-lg bg-primary/10 hover:bg-primary/15 transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight">High Performance Drills</span>
+<span class="material-symbols-outlined text-primary text-base">sports_tennis</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait photo of coach Marcus Thorne reviewing athlete stats on tablet courtside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr_DukhySG5CgvXOvT0sUoRWGBP6fWeiJCik9kMekrPa4hdzUG0NAVOPT1cD0YmXe65KvLe8lKa_F5gDoTcWNcJSDNaiKdoWrRWKKtmo1IxNdam_zuxLNTeMm3D0MRkrTV4Q4RuAMXwetoFftYXN3bIvWqa3TOYisUNPmS3hRxLypkAHc7SfNmY7dXbESbtbYqFALPaIIwa-GjCppk_Q6YafZiLtIC7r07zKbEJi8HJG-ZOWWpB9sj"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach Marcus T.</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-caption text-caption font-semibold">6/8 Enrolled</span>
+<span class="font-caption text-caption text-primary font-bold">Confirmed</span>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Team Polo Training</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<!-- Studio B 17:30 Class -->
+<div class="p-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Plyometrics &amp; Speed</span>
+<span class="material-symbols-outlined text-on-surface-variant text-base">speed</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Coach Sarah Wu preparing hurdle drills in modern sports facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXLAH1CWquMIyZWnoO1bOrewuaHdSFMeHPdyEBA6PdthI1QfhCrE7oMmObbRCDRoBddOO0c5EbKlcmeTfK-QXIFh3yfbNfGOZyJTve3UE2zMVwai2pSiTjIlZRru7fKFTARmseNWzMG36OGbiZR5QKZl4bG3kmVBjX3jPkLjo4bct7pncP3Lt8oa2Kk4ZfM9Lc5Uf1TymM099RPHK16Od2Tz63F872Vl6wWnHCun1Ix8V3jTW3jvUv"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach Sarah Wu</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-caption text-caption font-semibold">14/15 Enrolled</span>
+<span class="font-caption text-caption text-primary font-bold">Confirmed</span>
+</div>
+</div>
+<!-- TIME ROW: 18:30 -->
+<div class="py-space-md flex flex-col items-center justify-center bg-surface-container-low/50 rounded-lg">
+<span class="font-stat-value text-stat-value text-on-surface text-base">18:30</span>
+<span class="font-caption text-caption text-on-surface-variant">20:00</span>
+</div>
+<!-- Court 1 Unassigned Session Alert in Grid -->
+<div class="p-space-sm rounded-lg bg-error-container/40 hover:bg-error-container/60 transition-all flex flex-col justify-between shadow-xs ring-1 ring-error/30">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-error font-bold leading-tight">Youth Padel Beginners</span>
+<span class="material-symbols-outlined text-error text-base">warning</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<span class="material-symbols-outlined text-error text-base">help</span>
+<span class="font-caption text-caption text-error font-bold truncate">Coach Needed!</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-error text-on-error font-caption text-caption font-semibold">10/12 Enrolled</span>
+<button class="text-error font-caption text-caption font-bold underline hover:opacity-80" type="button">Quick Assign</button>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Deep End Closed</div>
+<!-- Main Gym 18:30 Class -->
+<div class="p-space-sm rounded-lg bg-tertiary/10 hover:bg-tertiary/15 transition-all flex flex-col justify-between shadow-xs">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-md text-label-md text-tertiary font-bold leading-tight">Open Scrimmage League</span>
+<span class="material-symbols-outlined text-tertiary text-base">sports_basketball</span>
+</div>
+<div class="flex items-center gap-1.5 my-1">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Basketball coach holding tournament lineup sheets in gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZgpLtQ5rKIhuTtQ-Z4n3ez14BXdr3rr10K2zaeG4smjMiBYVBHULFaQmfClyXRorFezl_X371OitONO4mT2JXg7FPRbE1fffbYLjCjmS-FHdjGqq0dl_s3OH72k8xCw_tVOrm833PynKkfaaaT5FloP0Idyb2HAJ6bwyV77yGFfHHmzhSI_ZQ2ius3ceWIW5gX-sdreAyKKM99H7Kn5ZDZY1Px8DGo6whlY3CQqYFhMHD-DmxyJG5"/>
+<span class="font-caption text-caption text-on-surface font-medium truncate">Coach David Kalu</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary text-on-tertiary font-caption text-caption font-semibold">30/30 Full</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">Waitlist (4)</span>
+</div>
+</div>
+<div class="p-2 bg-surface-container-low/30 rounded-lg flex items-center justify-center text-on-surface-variant/40 font-caption text-caption">Available</div>
+</div>
+</div>
+</div>
+<!-- Side Inspector & Tactical Metrics Drawer (3 Columns) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Today's Facility Load Gauge Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Facility Utilization</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-caption text-caption font-bold">Peak Range</span>
+</div>
+<div class="flex items-center gap-space-md my-1">
+<!-- Circular SVG Gauge -->
+<div class="relative w-20 h-20 shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="88, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-stat-value text-stat-value text-on-surface leading-none text-xl">88%</span>
+<span class="font-caption text-caption text-on-surface-variant">Occupied</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Active Courts:</span>
+<span class="font-bold text-on-surface">14 / 16</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Turnover Delay:</span>
+<span class="font-bold text-primary">0 min (Clean)</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Total Athletes:</span>
+<span class="font-bold text-on-surface">148 Scheduled</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-xs text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">info</span>
+          Hard Courts nearing 100% capacity from 16:30 to 20:00.
+        </div>
+</div>
+<!-- Coach Allocation & Daily Workload Roster -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Coach Workload Ledger</span>
+<span class="font-caption text-caption text-secondary font-medium cursor-pointer hover:underline">Shift Limits</span>
+</div>
+<!-- Coach Workload List -->
+<div class="flex flex-col gap-space-sm mt-1">
+<!-- Coach Marcus -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Headshot of tennis coach Marcus Thorne on court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCIWNacV8xJN-aLZWZDKyAPM7C8HnZbM8wUj6bsLxXolVV6rPKaaL9z_MCDfMbovDKce6tUi-AkVzyR4bewsLqrHqcqL3o5MqsdhlUpsXn7A8-de90W8mGrdCvbYaZtZPVNZgFrJ6AA7B3aL3rHxwV2qMZSOv2sg8QTZ5XioyAE9SukarNwiZ8KVOAybFPo_j1b6SUE-sokJY7EZnZPKWzEQWgxQ90ATaUDXLwuvDT-hPV1Yda6qx5"/>
+<div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Coach Marcus Thorne</span>
+<span class="font-caption text-caption text-on-surface-variant">Tennis · Master Pro</span>
+</div>
+</div>
+<span class="font-label-tabular text-label-tabular text-on-surface font-bold">5.5 hrs</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 85%"></div>
+</div>
+<div class="flex justify-between items-center text-xs text-on-surface-variant">
+<span>Limit: 6.0 hrs/day</span>
+<span class="text-secondary font-semibold">Near Threshold</span>
+</div>
+</div>
+<!-- Coach Elena -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait photo of head swim coach Elena Rostova" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8mdxzkh3Pp20sGHu1ywEcPXUx0DYa9MJsFBXb9OZQosn4n0DYBFaoLb8YT5tNsCnOOHfYR52dldxbhVWLBqCDYKxmJCfWbiEFTJY-OSV_A3k2FS-yv76XRBIaj1LaoXNsJHYP6_0FmjdTUozxgiYwPnTW3EZUE6VJYpbuddHv9dMp-5wf1m25-7mW1EAwjzmjGVBgzcMbYgMGOA9dmemrio8BBSvn_RrDJZoQ5665LflFABD9Kjog"/>
+<div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Coach Elena Rostova</span>
+<span class="font-caption text-caption text-on-surface-variant">Aquatics · Olympic Staff</span>
+</div>
+</div>
+<span class="font-label-tabular text-label-tabular text-error font-bold">6.0 hrs</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+<div class="flex justify-between items-center text-xs text-on-surface-variant">
+<span>Limit: 6.0 hrs/day</span>
+<span class="text-error font-semibold">Max Booked</span>
+</div>
+</div>
+<!-- Coach Carlos -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Headshot of tennis trainer Carlos Mendez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpF_uiga10ek3BKYRCe0eHwqkE8i1X7UeYL7vd-l1SM91T3ohiz8JqR4Fnl55GmDSkOm43t4bGyujKxk2akiJL_ZF1BnDYIqJndx4ukx4VYQdBaY_kWmHMWVAfV-N9yvA1gNvQHNa2lWpi_Vkh6_FLtKCFFKOI15MKyae13hvBNsfFH0LfyQzKf9LdqKs5ayWn3MHddtVEhoK-Pa4uCRmbxhBnAzWY1i8T26VtQi1Gp5w43mElJtOB"/>
+<div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Coach Carlos Mendez</span>
+<span class="font-caption text-caption text-on-surface-variant">Tennis &amp; Padel</span>
+</div>
+</div>
+<span class="font-label-tabular text-label-tabular text-primary font-bold">4.0 hrs</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 60%"></div>
+</div>
+<div class="flex justify-between items-center text-xs text-on-surface-variant">
+<span>Limit: 6.0 hrs/day</span>
+<span class="text-primary font-semibold">Available for +2 hrs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Urgent Action Card: Unassigned Session Alert -->
+<div class="p-space-md rounded-xl bg-error-container text-on-error-container shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-xl animate-bounce">warning</span>
+<span class="font-label-lg text-label-lg font-bold">Unassigned Session</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-caption text-caption font-bold">1 Alert</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm font-bold">Youth Padel Beginners</span>
+<span class="font-caption text-caption opacity-90">Today @ 18:00 – 19:30 · Court 1 Indoor</span>
+<p class="font-body-sm text-body-sm opacity-95 mt-1">10 registered students arriving in 4.5 hours. No lead instructor currently flagged.</p>
+</div>
+<!-- 1-Click Action -->
+<button class="w-full py-2.5 rounded-lg bg-error text-on-error hover:opacity-90 font-label-lg text-label-lg transition-all flex items-center justify-center gap-1.5 shadow-sm mt-1" type="button">
+<span class="material-symbols-outlined text-lg">person_add</span>
+<span>Assign Coach Carlos (Free)</span>
+</button>
+</div>
+<!-- Quick Facility Health Summary Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Facility Conditions</span>
+<div class="grid grid-cols-2 gap-2 text-xs">
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-on-surface-variant">Clay Court Moisture</span>
+<span class="font-stat-value text-stat-value text-base text-primary">Optimal 44%</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-on-surface-variant">Olympic Pool Temp</span>
+<span class="font-stat-value text-stat-value text-base text-secondary">26.8°C</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-on-surface-variant">Gym Air Quality</span>
+<span class="font-stat-value text-stat-value text-base text-tertiary">AQI 18 (Pure)</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-on-surface-variant">Studio B HVAC</span>
+<span class="font-stat-value text-stat-value text-base text-on-surface">21.0°C Set</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interaction trigger for fast reassignment highlight
+  const swapBtn = document.getElementById('trigger-swap-coach');
+  if (swapBtn) {
+    swapBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    });
+  }
+</script></main></div></body></html>
